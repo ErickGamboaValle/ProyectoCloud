@@ -1,0 +1,685 @@
+
+
+
+<html lang="es-MX"><head>
+  
+
+  
+  <script src="https://js-agent.newrelic.com/nr-spa-1211.min.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NBG82P"></script><script>
+    window.dataLayer = window.dataLayer || [];
+  
+    dataLayer.push(
+      { event: 'UserLogin', UserId: '' }
+    );
+  </script>
+  
+  
+  
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com/">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com/">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com/">
+    <link rel="dns-prefetch" href="https://connect.facebook.net/">
+  
+    <link href="https://www.googletagmanager.com/gtm.js?id=GTM-NBG82P" rel="preload" as="script">
+    <link href="https://www.google-analytics.com/analytics.js" rel="preload" as="script">
+  
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NBG82P');</script>
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"NRJS-96fc6141be39fe9372d","applicationID":"940490159","transactionName":"dw5bEkAJVQ9RER5cWVkEGg9cAlwb","queueTime":0,"applicationTime":729,"agent":""}</script>
+  <script>(window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:["bam.nr-data.net"]},distributed_tracing:{enabled:true}};(window.NREUM||(NREUM={})).loader_config={agentID:"940497583",accountID:"2981324",trustKey:"2981324",xpid:"Vg8PUFVRDBAJUFFWDgEGU10=",licenseKey:"NRJS-96fc6141be39fe9372d",applicationID:"940490159"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(30),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(31),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError";if(!c.disabled){var l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(14),t(13),"addEventListener"in window&&t(7),c.xhrWrappable&&t(15),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){L++,C=g.hash,this[u]=y.now()}function o(){L--,g.hash!==C&&i(0,!0);var t=y.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+g,e])}function a(t,e){t.on(e,function(){this[e]=y.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,g=w.location,y=t("loader");if(w[v]&&y.xhrWrappable&&!y.disabled){var x=t(11),b=t(12),E=t(9),R=t(7),O=t(14),S=t(8),T=t(15),N=t(10),P=t("ee"),M=P.get("tracer");t(17),y.features.spa=!0;var C,L=0;P.on(u,r),b.on(p,r),N.on(p,r),P.on(d,o),b.on(l,o),N.on(l,o),P.buffer([u,d,"xhr-resolved"]),R.buffer([u]),O.buffer(["setTimeout"+c,"clearTimeout"+s,u]),T.buffer([u,"new-xhr","send-xhr"+s]),S.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),x.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+s]),M.buffer([u,"no-"+u]),N.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(S,m+s),a(S,m+"-done"),a(N,"new-jsonp"),a(N,"jsonp-end"),a(N,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,L>1)},!0)}},{}],5:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(m,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function o(t){if(s(m,[window.performance.getEntriesByType(v)]),window.performance["c"+d])try{window.performance[l](h,o,!1)}catch(t){}else try{window.performance[l]("webkit"+h,o,!1)}catch(t){}}function i(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(14),f=t(13),u=t(6),d="learResourceTimings",p="addEventListener",l="removeEventListener",h="resourcetimingbufferfull",m="bstResource",v="resource",w="-start",g="-end",y="fn"+w,x="fn"+g,b="bstTimer",E="pushState",R=t("loader");if(!R.disabled){R.features.stn=!0,t(9),"addEventListener"in window&&t(7);var O=NREUM.o.EV;a.on(y,function(t,e){var n=t[0];n instanceof O&&(this.bstStart=R.now())}),a.on(x,function(t,e){var n=t[0];n instanceof O&&s("bst",[n,e,this.bstStart,R.now()])}),c.on(y,function(t,e,n){this.bstStart=R.now(),this.bstType=n}),c.on(x,function(t,e){s(b,[e,this.bstStart,R.now(),this.bstType])}),f.on(y,function(){this.bstStart=R.now()}),f.on(x,function(t,e){s(b,[e,this.bstStart,R.now(),"requestAnimationFrame"])}),a.on(E+w,function(t){this.time=R.now(),this.startPath=location.pathname+location.hash}),a.on(E+g,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(m,[window.performance.getEntriesByType("resource")]),r()):p in window.performance&&(window.performance["c"+d]?window.performance[p](h,o,!1):window.performance[p]("webkit"+h,o,!1)),document[p]("scroll",i,{passive:!0}),document[p]("keypress",i,!1),document[p]("click",i,!1)}}},{}],6:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],7:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],8:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return o.emit(n+"start",[t,a],s),s.then(function(t){return o.emit(n+"end",[null,t],s),t},function(t){throw o.emit(n+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(31),a=t(30);e.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,p=s.Response,l=s.fetch,h="prototype",m="nr@context";d&&p&&l&&(a(u,function(t,e){r(d[h],e,f),r(p[h],e,f)}),r(s,"fetch",c),o.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(c+"done",[null,e],n)}else o.emit(c+"done",[t],n)}))},{}],9:[function(t,e,n){var r=t("ee").get("history"),o=t("wrap-function")(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],10:[function(t,e,n){function r(t){function e(){c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){c.emit("jsonp-error",[],p),c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=s(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),c.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t("ee").get("jsonp"),f=t("wrap-function")(c);if(e.exports=c,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,l=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?f.inPlace(Node.prototype,l,"dom-"):(f.inPlace(HTMLElement.prototype,l,"dom-"),f.inPlace(HTMLHeadElement.prototype,l,"dom-"),f.inPlace(HTMLBodyElement.prototype,l,"dom-")),c.on("dom-start",function(t){r(t[0])})}},{}],11:[function(t,e,n){var r=t("ee").get("mutation"),o=t("wrap-function")(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],12:[function(t,e,n){function r(t){var e=i.context(),n=s(t,"executor-",e,null,!1),r=new f(n);return i.context(r).getCtx=function(){return e},r}var o=t("wrap-function"),i=t("ee").get("promise"),a=t("ee").getOrSetContext,s=o(i),c=t(30),f=NREUM.o.PR;e.exports=i,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){i.emit("propagate",[null,!o],a,!1,!1),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var a=e.apply(f,arguments),s=f.resolve(a);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&i.emit("propagate",[t,!0],n,!1,!1),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),o.wrapInPlace(f.prototype,"then",function(t){return function(){var e=this,n=o.argsToArray.apply(this,arguments),r=a(e);r.promise=e,n[0]=s(n[0],"cb-",r,null,!1),n[1]=s(n[1],"cb-",r,null,!1);var c=t.apply(this,n);return r.nextPromise=c,i.emit("propagate",[e,!0],c,!1,!1),c}}),i.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this,null,!1),t[1]=s(t[1],"resolve-",this,null,!1)}),i.on("executor-err",function(t,e,n){t[1](n)}),i.on("cb-end",function(t,e,n){i.emit("propagate",[n,!0],this.nextPromise,!1,!1)}),i.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=i.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],13:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],14:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],15:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):v?v(a):(E=-E,R.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(7);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),p=NREUM.o,l=p.XHR,h=p.MO,m=p.PR,v=p.SI,w="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new l(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(l,x),x.prototype=l.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],16:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=l.generateSpanId(),m=l.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&p())&&(w.traceContextParentHeader=o(h,m),w.traceContextStateHeader=i(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function o(t,e){return"00-"+e+"-"+t+"-01"}function i(t,e,n,r,o){var i=0,a="",s=1,c="",f="";return o+"@nr="+i+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var o=h(n.allowed_origins[r]);if(t.hostname===o.hostname&&t.protocol===o.protocol&&t.port===o.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function p(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var l=t(27),h=t(18);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],17:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):i(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this))}}function o(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function i(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(18),f=t(16).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],p=d.length,l=t("id"),h=t(23),m=t(22),v=t(19),w=NREUM.o.REQ,g=window.XMLHttpRequest;a.features.xhr=!0,t(15),t(8),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){i(e,t)},!1),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=m(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<p;s++)e.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof g&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof g&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var o=f(this.parsedOrigin);if(o&&(o.newrelicHeader||o.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var i={};for(var a in r)i[a]=r[a];i.headers=new Headers(r.headers||{}),e(i.headers,o)&&(this.dt=o),t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&e(t[0].headers,o)&&(this.dt=o)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},i=this.target;"string"==typeof i?n=i:"object"==typeof i&&i instanceof w?n=i.url:window.URL&&"object"==typeof i&&i instanceof URL&&(n=i.href),o(this,n);var s=(""+(i&&i instanceof w&&i.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}),u.on("fetch-done",function(t,e){this.endTime=a.now(),this.params||(this.params={}),this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],18:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],19:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?o(t.response):"text"===n||""===n||void 0===n?o(t.responseText):void 0}var o=t(22);e.exports=r},{}],20:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(30),s=t(31),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],21:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],22:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],23:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],24:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(i=Math.max((new Date).getTime(),i))-a}function o(){return i}var i=(new Date).getTime(),a=i,s=t(32);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=o},{}],25:[function(t,e,n){function r(t){return!(!t||!t.protocol||"file:"===t.protocol)}e.exports=r},{}],26:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?d("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&d("timing",["fcp",Math.floor(t.startTime)])})}function o(t,e){var n=t.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function i(t){t.getEntries().forEach(function(t){t.hadRecentInput||d("cls",[t])})}function a(t){if(t instanceof h&&!v){var e=Math.round(t.timeStamp),n={type:t.type};e<=p.now()?n.fid=p.now()-e:e>p.offset&&e<=Date.now()?(e-=p.offset,n.fid=p.now()-e):e=p.now(),v=!0,d("timing",["fi",e,n])}}function s(t){"hidden"===t&&d("pageHide",[p.now()])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var c,f,u,d=t("handle"),p=t("loader"),l=t(29),h=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){c=new PerformanceObserver(r);try{c.observe({entryTypes:["paint"]})}catch(m){}f=new PerformanceObserver(o);try{f.observe({entryTypes:["largest-contentful-paint"]})}catch(m){}u=new PerformanceObserver(i);try{u.observe({type:"layout-shift",buffered:!0})}catch(m){}}if("addEventListener"in document){var v=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(t){document.addEventListener(t,a,!1)})}l(s)}},{}],27:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){return a(16)}function i(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,o=window.crypto||window.msCrypto;o&&o.getRandomValues&&Uint8Array&&(n=o.getRandomValues(new Uint8Array(31)));for(var i=[],a=0;a<t;a++)i.push(e().toString(16));return i.join("")}e.exports={generateUuid:r,generateSpanId:o,generateTraceId:i}},{}],28:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],29:[function(t,e,n){function r(t){function e(){t(a&&document[a]?document[a]:document[o]?"hidden":"visible")}"addEventListener"in document&&i&&document.addEventListener(i,e,!1)}e.exports=r;var o,i,a;"undefined"!=typeof document.hidden?(o="hidden",i="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",i="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",i="webkitvisibilitychange",a="webkitVisibilityState")},{}],30:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],31:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],32:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,o,i,a){if(a!==!1&&(a=!0),!l.aborted||i){t&&a&&t(n,r,o);for(var s=e(o),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var p=d[y[n]];return p&&p.push([x,n,r,s]),s}}function i(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return p[t]=p[t]||o(n)}function w(t,e){l.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:i,addEventListener:i,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function i(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var c="nr@context",f=t("gos"),u=t(30),d={},p={},l=e.exports=o();e.exports.getOrSetContext=i,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!S++){var t=O.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+O.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function o(){"complete"===m.readyState&&i()}function i(){s("mark",["domContent",a()+O.offset],null,"api")}var a=t(24),s=t("handle"),c=t(30),f=t("ee"),u=t(28),d=t(25),p=t(21),l=p.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,v="addEventListener",w="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!d(h.location);NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1211.min.js"},R=g&&y&&y[v]&&!/CriOS/.test(navigator.userAgent),O=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(20),t(26),m[v]?(m[v]("DOMContentLoaded",i,!1),h[v]("load",r,!1)):(m[w]("onreadystatechange",o),h[w]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var S=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var i,a,u,p;try{a=this,i=d(arguments),u="function"==typeof r?r(i,a):r||{}}catch(l){o([l,"",[i,a,c],u],t)}s(n+"start",[i,a,c],u,f);try{return p=e.apply(a,i)}catch(h){throw s(n+"err",[i,a,h],u,f),h}finally{s(n+"end",[i,a,p],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,i(e,nrWrapper,t),nrWrapper)}function r(t,e,r,o,i){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,o,c,i))}function s(n,r,i,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,i,e,a)}catch(c){o([c,n,r,i],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=p,n}function o(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function i(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(i){o([i],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function s(t,e){var n=e(t);return n[p]=t,i(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(31),p="nr@original",l=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,17,5,3,4]);</script>
+    <title>Smart Nutri App</title>
+    <meta name="description" content="Gimnasio Smart Fit - La red Smart Fit tiene como propósito democratizar el acceso a la práctica de actividad física de alto nivel, con planos accesibles y adhesión facilitada">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+    
+  
+    <link rel="dns-prefetch" href="https://assets.smartfit.com.br/">
+    <link rel="dns-prefetch" href="https://cdn.smartfit.com.br/">
+  
+    <link rel="preload" href="/packs/media/logo-cb8dd34d.svg" as="image">
+    <link rel="preload" href="/packs/media/logo-slogan-pt-60a6beb3.svg" as="image">
+  
+    <link rel="apple-touch-icon" type="image/png" href="/packs/media/apple-icon-57x57-2947bd46.png" size="57x57">
+  <link rel="apple-touch-icon" type="image/png" href="/packs/media/apple-icon-60x60-e74d7ff9.png" size="60x60">
+  <link rel="apple-touch-icon" type="image/png" href="/packs/media/apple-icon-72x72-b7e3603f.png" size="72x72">
+  <link rel="apple-touch-icon" type="image/png" href="/packs/media/apple-icon-76x76-c9f76145.png" size="76x76">
+  <link rel="apple-touch-icon" type="image/png" href="/packs/media/apple-icon-114x114-8cecb0a5.png" size="114x114">
+  <link rel="apple-touch-icon" type="image/png" href="/packs/media/apple-icon-120x120-73d054bb.png" size="120x120">
+  <link rel="apple-touch-icon" type="image/png" href="/packs/media/apple-icon-144x144-41b9c378.png" size="144x144">
+  <link rel="apple-touch-icon" type="image/png" href="/packs/media/apple-icon-152x152-cebb5d54.png" size="152x152">
+  <link rel="apple-touch-icon" type="image/png" href="/packs/media/apple-icon-180x180-6ead1a18.png" size="180x180">
+  
+  <link rel="icon" type="image/png" href="/packs/media/android-icon-192x192-3165d36c.png" size="192x192">
+  
+  <link rel="icon" type="image/png" href="/packs/media/favicon-16x16-4cb0cc0e.png" size="16x16">
+  <link rel="icon" type="image/png" href="/packs/media/favicon-32x32-57ad5305.png" size="32x32">
+  <link rel="icon" type="image/png" href="/packs/media/favicon-96x96-02d682e5.png" size="96x96">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/packs/media/ms-icon-144x144-41b9c378.png">
+  <meta name="theme-color" content="#ffffff">
+  
+  
+      <link rel="stylesheet" href="/home/home.css?20210610">
+  
+    <link rel="preload" href="https://cdn.smartfit.com.br/nossa-smart/dist/lazysizes.min.js" as="script">
+    <link rel="preload" href="/home/home.js?2021929" as="script">
+  
+      <link rel="preload" href="//assets.smartfit.com.br/fonts/roboto/Roboto-300.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="//assets.smartfit.com.br/fonts/roboto/Roboto-regular.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="//assets.smartfit.com.br/fonts/roboto/Roboto-700.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="//assets.smartfit.com.br/fonts/gotham/GothamHTF-Book.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="//assets.smartfit.com.br/fonts/gotham/GothamHTF-Medium.woff" as="font" crossorigin="anonymous">
+    <link rel="preload" href="//assets.smartfit.com.br/fonts/gotham/Gotham-Black-Regular.woff" as="font" crossorigin="anonymous">
+  
+  
+    <link rel="preload" href="/images/fallback_image.gif" as="image">
+    <link rel="preload" href="https://cdn.smartfit.com.br/nossa-smart/smart-go-3.png" as="image">
+    <link rel="preload" href="https://cdn.smartfit.com.br/nossa-smart/elipse.png" as="image">
+    <link rel="preload" href="https://cdn.smartfit.com.br/nossa-smart/left-arrow.svg" as="image">
+    <link rel="preload" href="https://cdn.smartfit.com.br/nossa-smart/right-arrow.svg" as="image">
+  
+    <link rel="preload" href="https://cdn.smartfit.com.br/covid/icon-desinfeccao.png" as="image">
+    <link rel="preload" href="https://cdn.smartfit.com.br/covid/icon-distancia.png" as="image">
+    <link rel="preload" href="https://cdn.smartfit.com.br/covid/icon-agende.png" as="image">
+    <link rel="preload" href="https://cdn.smartfit.com.br/covid/icon-termometro.png" as="image">
+    <link rel="preload" href="https://cdn.smartfit.com.br/covid/icon-usaremos-mascara.png" as="image">
+    <link rel="preload" href="https://cdn.smartfit.com.br/covid/icon-tapetes.png" as="image">
+    <link rel="preload" href="https://cdn.smartfit.com.br/covid/icon-ventilacao.png" as="image">
+    <link rel="preload" href="https://cdn.smartfit.com.br/nossa-smart/img_cover_academia_funcional.jpg" as="image">
+    <link rel="preload" href="https://cdn.smartfit.com.br/nossa-smart/img_cover_academia_cardio.jpg" as="image">
+    <link rel="preload" href="https://cdn.smartfit.com.br/nossa-smart/img_cover_academia_fitness-app.jpg" as="image">
+    <link rel="preload" href="https://cdn.smartfit.com.br/nossa-smart/img_cover_academia_fitness-remote.jpg" as="image">
+    <link rel="preload" href="https://cdn.smartfit.com.br/nossa-smart/img_cover_academia_aulas.jpg" as="image">
+    <link rel="preload" href="https://cdn.smartfit.com.br/nossa-smart/img_cover_academia_musculacao.jpg" as="image">
+  
+      <link rel="preload" href="https://cdn.smartfit.com.br/nossa-smart/new_smart_image.png" as="image">
+      <link rel="preload" href="https://cdn.smartfit.com.br/nova-home/images/cta-new-class.jpg" as="image">
+      <link rel="preload" href="https://cdn.smartfit.com.br/nova-home/images/cta-new-coach.jpg" as="image">
+      <link rel="preload" href="https://cdn.smartfit.com.br/nova-home/images/cta-new-nutri.jpg" as="image">
+      <link rel="preload" href="https://cdn.smartfit.com.br/nova-home/images/cta-new-go.jpg" as="image">
+          <link rel="preload" href="https://assets.smartfit.com.br/attachments/617b7e01fb2b43b2c073810094555e6ff37b7c5f/store/521e85b98c85d3f3b2a83eda01389b436c9243b06936d62b7d2e9a1962b8/banner_mobile" as="image">
+          <link rel="preload" href="https://assets.smartfit.com.br/attachments/ae61ea564b9feb74741821e012e46039b3f5f3bc/store/60508452c87cb09822baea25dad578e45be42a0e9ab787c9eca05ddd76d2/banner_desktop" as="image">
+          <link rel="preload" href="https://assets.smartfit.com.br/attachments/47fd37cab5b300c04a70c5945e28fa83efef5e81/store/a318969a883962b7ce0f19478862f6526fa851b681b65189a9eb735a9b94/banner_mobile" as="image">
+          <link rel="preload" href="https://assets.smartfit.com.br/attachments/2a4264ff33b04150599df99bcd1683f2a8684f8f/store/ea9eff38b2bab27ca2ad3aca9a48035994e74255d29ecc2c17f9e21db0d9/banner_desktop" as="image">
+  
+  
+      <link rel="stylesheet" media="screen" href="/packs/css/public_layout_v3-d59f511a.css">
+  
+      <link rel="preload" href="/packs/css/public_layout_v3-d59f511a.css" as="style">
+      <link rel="preload" href="/packs/js/public_layout_v3-d8bd79d291f667f24372.js" as="script">
+  
+        <link rel="preload" href="/packs/js/public_layout_v3_async-c636a3750107fe22ba23.chunk.js" as="script">
+  
+  <style type="text/css">:root topadblock, :root span[id^="ezoic-pub-ad-placeholder-"], :root input[onclick^="window.open('http://www.FriendlyDuck.com/"], :root img[alt^="Fuckbook"], :root iframe[src*="mellowads.com"], :root div[id^="zergnet-widget"], :root div[id^="traffective-ad-"], :root div[id^="taboola-stream-"], :root div[id^="sticky_ad_"], :root div[id^="rc-widget-"], :root div[id^="q1-adset-"], :root div[id^="proadszone-"], :root div[id^="lazyad-"], :root div[id^="gtm-ad-"], :root div[id^="ezoic-pub-ad-"], :root div[id^="dmRosAdWrapper"], :root div[id^="div-adtech-ad-"], :root div[id^="dfp-slot-"], :root div[id^="dfp-ad-"], :root div[id^="code_ads_"], :root div[id^="block-views-topheader-ad-block-"], :root div[id^="banner-ad-"], :root div[id^="advt-"], :root div[id^="advads_"], :root div[id^="ads300_600-widget"], :root input[onclick^="window.open('http://www.friendlyduck.com/"], :root div[id^="ads300_250-widget"], :root div[id^="ads300_100-widget"], :root div[id^="ads120_600-widget"], :root div[id^="adrotate_widgets-"], :root div[id^="adfox_"], :root div[id^="ad_script_"], :root div[id^="ad_rect_"], :root div[id^="ad_position_"], :root div[id^="ad-server-"], :root div[id^="ad-inserter-"], :root div[id^="ad-cid-"], :root div[id^="acm-ad-tag-"], :root div[id^="YFBMSN"], :root div[id^="ADV-SLOT-"], :root div[data-test-id="AdDisplayWrapper"], :root div[data-spotim-slot], :root div[data-role="sidebarAd"], :root div[data-native_ad], :root div[data-mediatype="advertising"], :root div[data-id-advertdfpconf], :root div[data-content="Advertisement"], :root div[data-adunit], :root div[data-adunit-path], :root div[data-adservice-param-tagid="contentad"], :root div[data-adname], :root div[data-ad-wrapper], :root div[data-ad-underplayer], :root div[data-ad-placeholder], :root div[class^="zn-sponsored-outbrain-"], :root div[class^="sp-adslot-"], :root div[class^="proadszone-"], :root div[class^="pane-google-admanager-"], :root div[class^="native-ad-"], :root div[class^="lifeOnwerAd"], :root div[class^="largeRectangleAd_"], :root div[class^="kiwiad-popup"], :root div[class^="kiwiad-desktop"], :root div[class^="index_adBeforeContent_"], :root div[class^="index_adAfterContent_"], :root div[class^="index__adWrapper"], :root div[class^="block-openx-"], :root div[class^="backfill-taboola-home-slot-"], :root div[class^="articleAdUnitMPU_"], :root div[class^="advertisement-desktop"], :root div[class^="adsbutt_wrapper_"], :root div[class^="ads-partner-"], :root div[class^="adbanner_"], :root div[class^="ad_position_"], :root div[class^="SponsoredAds"], :root div[class^="ResponsiveAd-"], :root div[class^="PreAd_"], :root div[class^="Display_displayAd"], :root div[class^="Directory__footerAds"], :root div[class^="BannerAd_"], :root div[class^="AdhesionAd_"], :root div[class^="Ad__bigBox"], :root div[class^="Ad__adContainer"], :root div[class^="AdSlot__container"], :root div[id^="divAdvAD_"], :root div[class^="ad_border_"], :root div[class^="AdItem-"], :root div[class^="AdEmbeded__AddWrapper"], :root span[data-component-type="s-ads-metrics"], :root div[class^="AdBannerWrapper-"], :root div[class*="_AdInArticle_"], :root div[class*="-storyBodyAd-"], :root div[data-subscript="Advertising"], :root div[class$="dealnews"] > .dealnews, :root div > [class][onclick*=".updateAnalyticsEvents"], :root display-ads, :root display-ad-component, :root bottomadblock, :root aside[id^="tn_ads_widget-"], :root aside[id^="adrotate_widgets-"], :root amp-ad-custom, :root a[target="_blank"][onmousedown="this.href^='http://paid.outbrain.com/network/redir?"], :root a[target="_blank"][href^="http://api.taboola.com/"], :root div[class^="BlockAdvert-"], :root a[src^="https://www.utherverse.com/net/"], :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[onmousedown^="this.href='http://paid.outbrain.com/network/redir?"][target="_blank"], :root a[onclick*="//m.economictimes.com/etmack/click.htm"], :root a[href^="https://zononi.com/"], :root a[href^="https://www.what-sexdating.com/"], :root a[href^="https://www.vewwrmp.com/"], :root a[href^="https://www.spyoff.com/"], :root a[href^="https://www.sheetmusicplus.com/?aff_id="], :root a[href^="https://www.sheetmusicplus.com/"][href*="?aff_id="], :root a[href^="https://www.share-online.biz/affiliate/"], :root a[href^="https://www.securegfm.com/"], :root a[href^="https://www.rabbits.webcam/?id="], :root a[href^="https://www.purevpn.com/"][href*="&utm_source=aff-"], :root a[href^="https://www.privateinternetaccess.com/"] > img, :root a[href^="https://www.porngamesxxx.com/"][href*="?campaign="], :root a[href^="https://www.passeura.com/"], :root div[id^="amzn-assoc-ad"], :root a[href^="https://www.oboom.com/ref/"], :root div[itemtype="http://schema.org/WPAdBlock"], :root a[href^="https://www.nudeidols.com/cams/"], :root a[href^="https://www.mypornstarcams.com/landing/click/"], :root a[href^="https://www.kingsoffetish.com/tour?partner_id="], :root div[data-adzone], :root a[href^="https://www.iyalc.com/"], :root a[href^="https://www.goldenfrog.com/vyprvpn?offer_id="][href*="&aff_id="], :root a[href^="https://www.get-express-vpn.com/offer/"], :root a[href^="https://www.gambling-affiliation.com/cpc/"], :root a[href^="https://www.dollps.com/?track="], :root a[href^="https://www.clicktraceclick.com/"], :root a[href^="https://www.camsoda.com/enter.php?id="], :root a[href^="https://www.brazzersnetwork.com/landing/"], :root a[href^="https://www.bebi.com"], :root div[class^="pane-adsense-managed-"], :root a[href^="https://www.bang.com/?aff="], :root a[href^="https://www.awin1.com/cread.php?awinaffid="], :root a[href^="https://www.arthrozene.com/"][href*="?tid="], :root a[href^="https://weedzy.co.uk/"][href*="&utm_"], :root a[href^="https://vod09197d7.club/"], :root a[href^="https://vo2.qrlsx.com/"], :root a[href^="https://unreshiramor.com/"], :root a[href^="https://uncensored.game/"], :root div[id^="tms-ad-dfp-"], :root a[href^="http://c43a3cd8f99413891.com/"], :root a[href^="https://trust.zone/go/r.php?RID="], :root a[href^="https://trf.bannerator.com/"], :root a[href^="http://go.247traffic.com/"], :root a[href^="https://bestcond1tions.com/"], :root a[href^="https://trappist-1d.com/"], :root a[href^="https://tracking.truthfinder.com/?a="], :root a[href^="https://tracking.gitads.io/"], :root a[href^="https://go.xxxjmp.com/"], :root a[href^="https://tracking.avapartner.com/"], :root a[href^="https://track.wg-aff.com"], :root a[href^="https://track.ultravpn.com/"], :root a[href^="https://www.adultempire.com/"][href*="?partner_id="], :root a[href^="https://track.healthtrader.com/"], :root a[href^="https://track.clickmoi.xyz/"], :root a[href^="https://control.trafficfabrik.com/"], :root a[href^="https://track.52zxzh.com/"], :root a[href^="https://axdsz.pro/"], :root a[href^="https://tour.mrskin.com/"], :root a[href^="http://www.greenmangaming.com/?tap_a="], :root a[href^="https://tm-offers.gamingadult.com/"], :root a[href^="https://t.hrtyj.com/"], :root a[href^="https://syndication.optimizesrv.com/splash.php?"], :root a[href^="https://squren.com/rotator/?atomid="], :root a[href^="http://cdn3.adexprts.com/"], :root a[href^="https://spygasm.com/track?"], :root div[id^="ad-div-"], :root a[href^="https://secure.eveonline.com/ft/?aid="], :root a[href^="https://secure.bstlnk.com/"], :root div[class^="kiwi-ad-wrapper"], :root a[href^="https://rev.adsession.com/"], :root [href*=".trackmstr.com"], :root a[href^="https://refpasrasw.world/"], :root a[href^="https://mediaserver.entainpartners.com/renderBanner.do?"], :root a[href^="https://refpaexhil.top/"], :root a[href^="https://reachtrgt.com/"], :root AD-SLOT, :root a[href^="https://pubads.g.doubleclick.net/"], :root a[href^="https://prf.hn/click/"][href*="/camref:"] > img, :root a[href^="http://www.my-dirty-hobby.com/?sub="], :root a[href^="https://porndeals.com/?track="], :root a[href^="//go.onclasrv.com/"], :root a[href^="https://pcm.bannerator.com/"], :root a[href^="https://offerforge.net/"], :root a[href^="https://ndt5.net/"], :root div[id^="ad_head_celtra_"], :root a[href^="https://wittered-mainging.com/"], :root a[href^="https://t.grtyi.com/"], :root a[href^="https://myusenet.xyz/"], :root a[href^="https://my-movie.club/"], :root [href^="https://detachedbates.com/"], :root a[href^="https://mk-cdn.net/"], :root a[href^="https://mk-ads.com/"], :root a[href^="https://meet-sex-here.com/?u="], :root a[href^="https://medleyads.com/"], :root a[href^="https://mediaserver.gvcaffiliates.com/renderBanner.do?"], :root iframe[src^="https://tpc.googlesyndication.com/"], :root a[href*=".approvallamp.club/"], :root a[href^="https://a.bestcontentoperation.top/"], :root a[href^="https://landing1.brazzersnetwork.com"], :root a[href^="http://adrunnr.com/"], :root a[href^="https://landing.brazzersplus.com/"], :root a[href^="https://land.rk.com/landing/"], :root a[href^="http://ad.au.doubleclick.net/"], :root a[href^="https://k2s.cc/pr/"], :root a[href^="https://juicyads.in/"], :root a[href^="https://join.virtuallust3d.com/"], :root a[href^="http://www.uniblue.com/cm/"], :root a[href^="https://join.sexworld3d.com/track/"], :root a[href^="https://join.dreamsexworld.com/"], :root a[href^="https://track.effiliation.com/servlet/effi.redir?"], :root a[href^="https://iqoption.com/lp/mobile-partner/"][href*="?aff="], :root [href^="http://join.shemalepornstar.com/"], :root a[href^="https://incisivetrk.cvtr.io/click?"], :root a[href^="https://iactrivago.ampxdirect.com/"], :root [href*="https://www.jmbullion.com/gold/"], :root a[href^="https://iac.ampxdirect.com/"], :root a[href^="https://horny-pussies.com/tds"], :root a[href^="https://graizoah.com/"], :root a[href^="http://feedads.g.doubleclick.net/"], :root a[href^="https://redsittalvetoft.pro/"], :root a[href^="https://googleads.g.doubleclick.net/pcs/click"], :root a[href^="http://cdn.adstract.com/"], :root a[href^="https://gogoman.me/"], :root a[href^="https://go.xtbaffiliates.com/"], :root a[href^="https://go.strpjmp.com/"], :root a[href^="https://go.stripchat.com/"][href*="&campaignId="], :root a[href^="https://go.markets.com/visit/?bta="], :root a[href^="https://go.julrdr.com/"], :root a[href^="https://landing.brazzersnetwork.com/"], :root a[href^="https://go.hpyjmp.com/"], :root a[href^="https://go.goasrv.com/"], :root a[href^="https://adnetwrk.com/"], :root a[href^="https://go.gldrdr.com/"], :root a[href^="https://fleshlight.sjv.io/"], :root a[href^="https://go.etoro.com/"] > img, :root a[href^="https://go.currency.com/"], :root a[href^="https://track.afftck.com/"], :root a[href^="http://guideways.info/"], :root a[href^="https://go.cmrdr.com/"], :root a[href^="http://www.easydownloadnow.com/"], :root a[href^="https://go.alxbgo.com/"], :root a[href*=".inclk.com/"], :root a[href^="https://go.ad2up.com/"], :root a[href^="https://giftsale.co.uk/?utm_"], :root a[href^="https://get.surfshark.net/aff_c?"][href*="&aff_id="] > img, :root a[href^="https://fonts.fontplace9.com/"], :root a[href^="http://clkmon.com/adServe/"], :root a[href^="https://flirtaescopa.com/"], :root a[href^="https://fertilitycommand.com/"], :root a[href^="https://fakelay.com/"], :root a[href^="https://earandmarketing.com/"], :root [lazy-ad="leftthin_banner"], :root a[href^="https://dynamicadx.com/"], :root a[href^="https://djtcollectorclub.org/"][href*="?affiliate_id="], :root a[href^="https://tc.tradetracker.net/"] > img, :root a[href^="//srv.buysellads.com/"], :root a[href^="https://dianches-inchor.com/"], :root a[href^="https://creacdn.top-convert.com/"], :root iframe[src^="https://pagead2.googlesyndication.com/"], :root a[href^="https://retiremely.com/"], :root a[href^="https://cpmspace.com/"], :root a[href^="https://cpartner.bdswiss.com/"], :root a[href^="https://clicks.pipaffiliates.com/"], :root .commercial-unit-mobile-top > .v7hl4d, :root a[href^="https://click.plista.com/pets"], :root a[href^="https://chaturbate.xyz/"], :root a[href^="http://look.djfiln.com/"], :root a[href^="https://chaturbate.jjgirls.com/"][href*="?tour="], :root a[href^="https://chaturbate.com/in/?track="], :root a[href^="https://chaturbate.com/in/?tour="], :root a[href^="https://chaturbate.com/affiliates/"], :root [href*="wap4dollar.com/"], :root a[href^="https://mcdlks.com/"], :root a[href^="https://bs.serving-sys.com"], :root a[href^="https://blackorange.go2cloud.org/"], :root a[href^="https://go.hpyrdr.com/"], :root a[href^="https://billing.purevpn.com/aff.php"] > img, :root a[href^="https://affiliates.bet-at-home.com/processing/"], :root a[href^="https://ads.ad4game.com/"], :root a[href^="https://betway.com/"][href*="&a="], :root a[href^="http://www.linkbucks.com/referral/"], :root a[href^="https://azpresearch.club/"], :root a[href^="https://awptjmp.com/"], :root a[href^="http://www.fleshlight.com/"], :root a[href^="https://aweptjmp.com/"], :root a[href^="https://awentw.com/"], :root a[href^="https://albionsoftwares.com/"], :root a[href^="//postlnk.com/"], :root a[href^="https://affiliate.rusvpn.com/click.php?"], :root a[href^="https://affiliate.geekbuying.com/gkbaffiliate.php?"], :root a[href^="https://adultfriendfinder.com/go/page/landing"], :root a[href*="pussl3.com"], :root a[href^="https://adswick.com/"], :root ADS-RIGHT, :root a[href^="https://tracking.trackcasino.co/"], :root a[href^="https://adserver.adreactor.com/"], :root a[href^="https://land.brazzersnetwork.com/landing/"], :root a[href^="https://ads.leovegas.com/redirect.aspx?"], :root a[href^="https://t.hrtye.com/"], :root a[href^="https://ads.cdn.live/"], :root a[href^="https://ads.betfair.com/redirect.aspx?"], :root a[href^="https://refpaano.host/"], :root a[href^="https://meet-to-fuck.com/tds"], :root a[href^="https://adhealers.com/"], :root a[href^="http://servicegetbook.net/"], :root a[href^="https://bngpt.com/"], :root a[href^="http://clickandjoinyourgirl.com/"], :root a[href^="https://ad13.adfarm1.adition.com/"], :root a[href^="https://misspkl.com/"], :root a[href^="https://ad.zanox.com/ppc/"] > img, :root a[href^="https://static.fleshlight.com/images/banners/"], :root app-advertisement, :root a[href^="https://ad.doubleclick.net/"], :root a[href^="http://zevera.com/afi.html"], :root a[href^="http://go.oclaserver.com/"], :root a[href^="https://ad.atdmt.com/"], :root a[href^="https://cams.imagetwist.com/in/?track="], :root .trc_rbox .syndicatedItem, :root a[href^="https://aaucwbe.com/"], :root a[href^="https://a.bestcontentweb.top/"], :root a[href^="http://hyperlinksecure.com/go/"], :root a[href^="https://track.themadtrcker.com/"], :root a[href^="https://bullads.net/get/"], :root a[href^="http://down1oads.com/"], :root a[href^="http://yads.zedo.com/"], :root a[href^="http://xtgem.com/click?"], :root a[href^="https://ads.trafficpoizon.com/"], :root div[class^="local-feed-banner-ads"], :root a[href^="http://wxdownloadmanager.com/dl/"], :root a[href^="http://www.zergnet.com/i/"], :root a[href*=".clksite.com/"], :root a[href^="http://www.webtrackerplus.com/"], :root a[href^="http://www.usearchmedia.com/signup?"], :root a[href^="http://www.torntv-downloader.com/"], :root a[href^="http://www.tirerack.com/affiliates/"], :root a[href^="http://www.text-link-ads.com/"], :root a[href^="https://gghf.mobi/"], :root a[href^="http://www.terraclicks.com/"], :root a[href^="https://ads-for-free.com/click.php?"], :root a[href^="http://www.socialsex.com/"], :root a[href^="https://join.virtualtaboo.com/track/"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"], :root [href^="https://awbbjmp.com/"], :root a[href^="http://www.sfippa.com/"], :root a[href^="http://www.xmediaserve.com/"], :root a[href^="http://www.sex.com/videos/?utm_"], :root a[href^="https://natour.naughtyamerica.com/track/"], :root a[href^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://www.sex.com/?utm_"], :root a[href^="http://secure.signup-page.com/"], :root a[href^="http://www.quick-torrent.com/download.html?aff"], :root a[href^="http://www.plus500.com/?id="], :root a[href^="http://www.pinkvisualgames.com/?revid="], :root a[href^="https://trklvs.com/"], :root a[href^="http://www.paddypower.com/?AFF_ID="], :root a[href^="https://go.247traffic.com/"], :root a[href^="http://www.freefilesdownloader.com/"], :root a[href^="http://www.mysuperpharm.com/"], :root .trc_rbox_border_elm .syndicatedItem, :root a[href^="http://www.myfreepaysite.com/sfw_int.php?aid"], :root a[href^="http://www.myfreepaysite.com/sfw.php?aid"], :root a[href^="http://www.mrskin.com/tour"], :root a[href^="http://bcntrack.com/"], :root a[href^="http://www.securegfm.com/"], :root a[href^="http://www.liversely.net/"], :root a[href^="https://partners.fxoro.com/click.php?"], :root [href*="//trackmstr.com"], :root [href*="prayuserparka.com/"], :root a[href^="http://www.idownloadplay.com/"], :root a[href^="http://www.hitcpm.com/"], :root a[href^="http://fusionads.net"], :root a[href^="http://www.hibids10.com/"], :root div[class^="awpcp-random-ads"], :root [href*="//securesafemembers.com"], :root a[href^="http://www.graboid.com/affiliates/"], :root a[href^="http://www.gamebookers.com/cgi-bin/intro.cgi?"], :root div[id^="div_openx_ad_"], :root a[href^="http://www.friendlyquacks.com/"], :root a[href^="https://www.financeads.net/tc.php?"], :root a[href*=".tfaln.com/"], :root a[href^="http://www.friendlyduck.com/AF_"], :root a[href^="https://content.oneindia.com/www/delivery/"], :root a[href^="http://www.fpcTraffic2.com/blind/in.cgi?"], :root a[href^="http://www.flashx.tv/downloadthis"], :root .trc_rbox_div a[target="_blank"][href^="http://tab"], :root a[href^="https://americafirstpolls.com/"], :root a[href^="http://clickserv.sitescout.com/"], :root a[href^="http://www.firstload.de/affiliate/"], :root a[href^="http://www.twinplan.com/AF_"], :root a[href^="http://www.fducks.com/"], :root a[href^="http://www.duckssolutions.com/"], :root a[href^="https://torrentsafeguard.com/?aid="], :root a[href^="https://offers.refchamp.com/"], :root a[href^="https://go.trkclick2.com/"], :root a[href^="https://www.mrskin.com/account/"], :root a[href^="http://www.duckcash.eu/"], :root a[href^="http://go.seomojo.com/tracking202/"], :root a[href^="http://www.downloadweb.org/"], :root a[href^="http://www.down1oads.com/"], :root a[href^="http://www.dealcent.com/register.php?affid="], :root a[href^="http://www.clkads.com/adServe/"], :root a[href^="https://track.interactivegf.com/"], :root div[class^="adpubs-"], :root a[href*="deliver.trafficfabrik.com"], :root a[href^="http://www.cash-duck.com/"], :root a[href^="https://aff-ads.stickywilds.com/"], :root a[href^="http://www.bitlord.me/share/"], :root .grid > .container > #aside-promotion, :root a[href^="http://www.babylon.com/welcome/index?affID"], :root a[onmousedown^="this.href='/wp-content/embed-ad-content/"], :root a[href^="http://popup.taboola.com/"], :root a[href^="//adbit.co/?a=Advertise&"], :root a[href^="https://fast-redirecting.com/"], :root a[href^="https://bluedelivery.pro/"], :root [href^="http://join.michelle-austin.com/"], :root a[href^="http://www.sexgangsters.com/?pid="], :root a[href^="http://www.amazon.co.uk/exec/obidos/external-search?"], :root a[href^="http://www.afgr2.com/"], :root a[href^="http://c.jumia.io/"], :root a[href^="http://www.affiliates1128.com/processing/"], :root a[href^="http://go.ad2up.com/"], :root a[href^="https://badoinkvr.com/"], :root a[href*="/adServe/banners?"], :root a[href^="http://www.adxpansion.com"], :root a[href^="http://www.ragazzeinvendita.com/?rcid="], :root a[href^="http://www.adultdvdempire.com/?partner_id="][href*="&utm_"], :root .plistaList > .itemLinkPET, :root a[href^="http://www.adbrite.com/mb/commerce/purchase_form.php?"], :root a[href^="http://www.TwinPlan.com/AF_"], :root a[href^="https://www.googleadservices.com/pagead/aclk?"], :root a[href^="http://www.1clickdownloader.com/"], :root a[href^="http://www.123-reg.co.uk/affiliate2.cgi"], :root div[itemtype="http://www.schema.org/WPAdBlock"], :root a[href^="http://wopertific.info/"], :root a[href^="http://bodelen.com/"], :root a[href^="http://wgpartner.com/"], :root a[href^="http://web.adblade.com/"], :root a[href^="https://go.onclasrv.com/"], :root a[href^="http://wct.link/"], :root a[href^="http://us.marketgid.com"], :root a[href^="http://ul.to/ref/"], :root a[href^="http://ucam.xxx/?utm_"], :root a[href^="http://traffic.tc-clicks.com/"], :root a[href^="http://www.liutilities.com/"], :root a[href^="http://www.dl-provider.com/search/"], :root a[href^="http://tc.tradetracker.net/"] > img, :root a[href^="http://tracking.deltamediallc.com/"], :root div[aria-label="Ads"], :root a[href^="http://axdsz.pro/"], :root a[href^="https://go.ebrokerserve.com/"], :root a[href^="http://galleries.securewebsiteaccess.com/"], :root a[href^="http://stateresolver.link/"], :root a[href^="http://sharesuper.info/"], :root a[href^="https://awecrptjmp.com/"], :root a[href^="http://server.cpmstar.com/click.aspx?poolid="], :root a[href^="http://see.kmisln.com/"], :root a[href^="//db52cc91beabf7e8.com/"], :root a[href^="https://go.nordvpn.net/aff"] > img, :root a[href^="http://secure.vivid.com/track/"], :root a[href^="http://www.downloadthesefiles.com/"], :root a[href^="http://secure.cbdpure.com/aff/"], :root a[href*="?adlivk="][href*="&refer="], :root a[href^="//look.djfiln.com/"], :root a[href^="http://searchtabnew.com/"], :root aside[id^="advads_ad_widget-"], :root a[href^="http://lp.ezdownloadpro.info/"], :root a[href^="http://uploaded.net/ref/"], :root a[href^="https://www.nutaku.net/signup/landing/"], :root a[href^="http://s9kkremkr0.com/"], :root a[href^="http://azmobilestore.co/"], :root a[href^="http://s5prou7ulr.com/"], :root a[href^="http://rs-stripe.wsj.com/stripe/redirect"], :root a[href^="https://easygamepromo.com/ef/custom_affiliate/"], :root a[href^="http://record.betsafe.com/"], :root a[href*="a2g-secure.com"], :root a[href^="https://iqbroker.com/"][href*="?aff="], :root a[href^="http://buysellads.com/"], :root a[href^="http://reallygoodlink.freehookupaffair.com/"], :root a[href^="https://bnsjb1ab1e.com/"], :root a[href^="//oardilin.com/"], :root a[href^="http://pwrads.net/"], :root a[href^="http://promos.bwin.com/"], :root a[data-redirect^="https://paid.outbrain.com/network/redir?"], :root a[href^="http://play4k.co/"], :root a[href*="//ezofferz.com/"], :root a[href^="https://dltags.com/"], :root a[href^="http://onclickads.net/"], :root a[href^="https://ttf.trmobc.com/"], :root a[href^="http://n.admagnet.net/"], :root a[href^="//awejmp.com/"], :root a[href^="http://mob1ledev1ces.com/"], :root a[href^="http://mmo123.co/"], :root a[href^="http://media.paddypower.com/redirect.aspx?"], :root a[href^="http://allaptair.club/"], :root [href*=".engine.adglare.net/"], :root a[href^="https://track.trkinator.com/"], :root div[id^="ad-position-"], :root a[data-redirect^="this.href='http://paid.outbrain.com/network/redir?"], :root a[href^="http://liversely.com/"], :root a[href^="http://keep2share.cc/pr/"], :root a[href^="https://gamescarousel.com/"], :root a[href^="http://istri.it/?"], :root a[href^="http://www.fbooksluts.com/"], :root a[href^="http://www.cdjapan.co.jp/aff/click.cgi/"], :root a[href*="//ridingintractable.com/"], :root a[href^="http://c.actiondesk.com/"], :root a[href^="http://intent.bingads.com/"], :root a[href^="https://intrev.co/"], :root a[href^="http://https://www.get-express-vpn.com/offer/"], :root a[href^="//voyeurhit.com/cs/"], :root [href*=".go2page.net"], :root a[href^="http://hd-plugins.com/download/"], :root a[href^="http://greensmoke.com/"], :root a[href^="https://look.utndln.com/"], :root a[href^="//5e1fcb75b6d662d.com/"], :root a[href^="http://googleads.g.doubleclick.net/pcs/click"], :root .nrelate .nr_partner, :root a[href^="http://go.xtbaffiliates.com/"], :root a[href*=".purple6401.com/"], :root a[href^="https://oackoubs.com/"], :root a[href^="http://install.securewebsiteaccess.com/"], :root a[href^="http://www.revenuehits.com/"], :root a[href^="http://go.mobisla.com/"], :root a[href^="https://ads.planetwin365affiliate.com/redirect.aspx?"], :root a[href^="http://g1.v.fwmrm.net/ad/"], :root a[href^="http://imads.integral-marketing.com/"], :root a[href^="http://freesoftwarelive.com/"], :root a[href^="http://adtrackone.eu/"], :root span[title="Ads by Google"], :root a[href^="http://finaljuyu.com/"], :root a[href^="https://www.im88trk.com/"], :root a[href^="http://ffxitrack.com/"], :root a[href^="http://t.wowtrk.com/"], :root a[href^="//syndication.dynsrvtbg.com/splash.php?"], :root a[href^="http://extra.bet365.com/"][href*="?affiliate="], :root a[href^="http://ethfw0370q.com/"], :root a[href^="https://tracking.comfortclick.eu/"], :root [id^="bunyad_ads_"], :root a[href^="http://elitefuckbook.com/"], :root a[href^="http://eclkmpsa.com/"], :root a[href^="http://earandmarketing.com/"], :root a[href*=".mfroute.com/"], :root #content > #center > .dose > .dosesingle, :root a[href^="http://campaign.bharatmatrimony.com/track/"], :root a[href*="3wr110.xyz/"], :root a[href^="http://d2.zedo.com/"], :root a[href^="http://codec.codecm.com/"], :root a[href^="https://paid.outbrain.com/network/redir?"], :root a[href^="http://www.downloadplayer1.com/"], :root a[href^="http://clicks.binarypromos.com/"], :root a[href^="https://dediseedbox.com/clients/aff.php?"], :root [href^="/ucmini.php"], :root a[href^="http://www.wantstraffic.com/"], :root a[href^="http://track.afcpatrk.com/"], :root a[href^="http://databass.info/"], :root div[data-test-id="AdBannerWrapper"], :root div[class^="AdCard_"], :root a[href^="http://www.urmediazone.com/signup"], :root a[href^="http://click.plista.com/pets"], :root a[href^="http://chaturbate.com/affiliates/"], :root [href^="https://secure.bmtmicro.com/servlets/"], :root a[href^="http://amzn.to/"] > img[src^="data"], :root a[href^="http://bs.serving-sys.com/"], :root a[href^="http://cpaway.afftrack.com/"], :root a[href^="http://cdn.adsrvmedia.net/"], :root [lazy-ad="top_banner"], :root a[href^="http://360ads.go2cloud.org/"], :root a[href^="http://dftrck.com/"], :root a[href^="http://casino-x.com/?partner"], :root a[href^="https://meet-sexhere.com/"], :root a[href^="http://record.sportsbetaffiliates.com.au/"], :root a[href^="http://campeeks.com/"][href*="&utm_"], :root a[href^="http://download-performance.com/"], :root a[href^="http://www.on2url.com/app/adtrack.asp"], :root #\5f _nq__hh[style="display:block!important"], :root [href^="https://affect3dnetwork.com/track/"], :root div[class^="index_displayAd_"], :root a[href^="http://adultgames.xxx/"], :root a[href^="https://s.zlink2.com/"], :root a[href^="http://semi-cod.com/clicks/"], :root a[href*="//bongacams4.com/track?"], :root a[href^="http://campaign.bharatmatrimony.com/cbstrack/"], :root a[href^="http://www.seekbang.com/cs/"], :root a[href^="http://syndication.exoclick.com/"], :root a[href^="http://k2s.cc/pr/"], :root [src*="https://cdn.cloudimagesb.com/"], :root a[href^="http://bluehost.com/track/"], :root div[id^="vuukle-ad-"], :root a[href^="http://betahit.click/"], :root a[href^="https://torguard.net/aff.php"] > img, :root a[href^="http://bestorican.com/"], :root a[href^="http://bcp.crwdcntrl.net/"], :root a[href^="http://bc.vc/?r="], :root a[href^="https://windscribe.com/promo/"], :root a[href^="http://farm.plista.com/pets"], :root a[href^="https://leg.xyz/?track="], :root a[href^="http://affiliate.glbtracker.com/"], :root a[href^="https://transfer.xe.com/signup/track/redirect?"], :root a[href^="http://anonymous-net.com/"], :root aside[itemtype="https://schema.org/WPAdBlock"], :root a[href^="https://watchmygirlfriend.tv/"], :root a[href^="https://ovb.im/"], :root a[href^="http://hotcandyland.com/partner/"], :root a[href^="http://affiliates.thrixxx.com/"], :root #atvcap + #tvcap > .mnr-c > .commercial-unit-mobile-top, :root a[href*="/adrotate-out.php?"], :root a[href^="http://affiliates.lifeselector.com/"], :root a[href^="http://affiliate.coral.co.uk/processing/"], :root a[href^="http://aff.ironsocket.com/"], :root div[id^="drudge-column-ads-"], :root a[href*="//bongacams10.com/track?"], :root a[href^="http://tour.mrskin.com/"], :root [src^="/Redirect.a2b?"], :root a[href^="http://linksnappy.com/?ref="], :root ad-desktop-sidebar, :root [id*="MGWrap"], :root a[href^="http://9amq5z4y1y.com/"], :root a[href^="http://adtrack123.pl/"], :root a[href^="http://adsrv.keycaptcha.com"], :root a[href^="http://deloplen.com/afu.php?zoneid="], :root div[class^="StickyHeroAdWrapper-"], :root a[href^="http://cwcams.com/landing/click/"], :root a[href^="http://ads.betfair.com/redirect.aspx?"], :root a[href^="https://www.mrskin.com/tour"], :root a[href^="http://adserver.adtech.de/"], :root a[href^="http://adserver.adreactor.com/"], :root a[href^="http://ads.sprintrade.com/"], :root a[data-redirect^="http://click.plista.com/pets"], :root .section-subheader > .section-hotel-prices-header, :root a[href^="http://landingpagegenius.com/"], :root [href^="https://click2cvs.com/"], :root a[href^="http://ads.expekt.com/affiliates/"], :root a[href^="http://reallygoodlink.extremefreegames.com/"], :root a[href^="http://adlev.neodatagroup.com/"], :root [href*="//mclick.net"], :root a[href^="http://adclick.g.doubleclick.net/"], :root a[href^="http://www.sex.com/pics/?utm_"], :root a[href^="http://vo2.qrlsx.com/"], :root [href^="https://stvkr.com/"], :root a[href^="http://engine.newsmaxfeednetwork.com/"], :root a[href^="http://ad.yieldmanager.com/"], :root [href^="http://homemoviestube.com/"], :root a[href^="http://ad.doubleclick.net/"], :root a[href^="http://websitedhoome.com/"], :root a[href^="https://clickadilla.com/"], :root .ob_container .item-container-obpd, :root a[href*=".directtl.xyz/"], :root a[href^="http://www.adskeeper.co.uk/"], :root a[href^="http://ad-emea.doubleclick.net/"], :root a[href^="http://srvpub.com/"], :root [data-dynamic-ads], :root a[href^="http://a.adquantix.com/"], :root a[href^="http://NowDownloadAll.com"], :root a[href^="http://1phads.com/"], :root a[href^="https://ismlks.com/"], :root a[href^="//zenhppyad.com/"], :root a[href^="https://www.sugarinstant.com/?partner_id="], :root a[href^="//z6naousb.com/"], :root a[href^="//www.pd-news.com/"], :root div[id^="ads250_250-widget"], :root [href^="https://go.astutelinks.com/"], :root [href*=".doubleclick-net.com"], :root a[href^="//www.mgid.com/"], :root a[href^="http://lp.ncdownloader.com/"], :root a[href^="//pubads.g.doubleclick.net/"], :root a[href^="http://www.ducksnetwork.com/"], :root a[href^="http://3wr110.net/"], :root #topstuff > #tads, :root a[href*=".bang.com/"][href*="&aff="], :root a[data-widget-outbrain-redirect^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://join3.bannedsextapes.com/track/"], :root [href^="http://join.shemalesfromhell.com/"], :root a[href^="https://www.travelzoo.com/oascampaignclick/"], :root a[href^="https://see.kmisln.com/"], :root [src^="//adtorio.com/"], :root a[href^="http://refer.webhostingbuzz.com/"], :root a[href^="//nlkdom.com/"], :root a[href^="//medleyads.com/spot/"], :root [href^="https://mylead.global/stl/"] > img, :root a[href^="https://ilovemyfreedoms.com/"][href*="?affiliate_id="], :root [href*=".afftracks.online/"], :root div[class^="Component-dfp-"], :root a[href^="//healthaffiliate.center/"], :root [onclick*="content.ad/"], :root a[href^="https://clixtrac.com/"], :root a[href^="//88d7b6aa44fb8eb.com/"], :root a[href^="http://go.fpmarkets.com/"], :root a[href^="//00ae8b5a9c1d597.com/"], :root [href^="http://join.ts-dominopresley.com/"], :root a[href^=".vddfe.club/"], :root [href^="/ucdownloader.php"], :root a[href^="https://awejmp.com/"], :root [href*="//go2page.net"], :root a[href^=" http://www.sex.com/"][href*="&utm_"], :root a[href^="https://fileboom.me/pr/"], :root a[href^="http://marketgid.com"], :root [href^="https://mysbitl.com"], :root a[href*="onclkds."], :root a[href^="https://adclick.g.doubleclick.net/"], :root a[href*=".intab.fun/"], :root a[href*="get-express-vpn.xyz"], :root a[href^="https://prf.hn/click/"][href*="/creativeref:"] > img, :root a[href^="http://www.adultempire.com/unlimited/promo?"][href*="&partner_id="], :root a[href*="=adscript"], :root a[href*="=Adtracker"], :root a[href^="https://trusted-click-host.com/"], :root a[href^="https://members.linkifier.com/public/affiliateLanding?refCode="], :root a[href^="https://jmp.awempire.com/"], :root [href^="https://wct.link/"], :root a[href^="https://track.totalav.com/"], :root a[href^="http://ad-apac.doubleclick.net/"], :root a[href*="/servlet/click/zone?"], :root a[href^="http://track.trkvluum.com/"], :root a[href^="https://www.chngtrack.com/"], :root a[href*="=exoclick"], :root a[href^="http://www.firstclass-download.com/"], :root a[href*="//bongacams7.com/track?"], :root FBS-AD, :root a[href*="//bongacams5.com/track?"], :root a[href^="http://k2s.cc/code/"], :root a[href*="//bongacams2.com/track?"], :root a[href^="//4f6b2af479d337cf.com/"], :root [href*="//doubleclick-net.com"], :root div[id^="advads-"], :root a[href^="http://www.myfreecams.com/?co_id="][href*="&track="], :root a[href^="https://track.afcpatrk.com/"], :root a[href*=".ad-center.com/"], :root a[href*=".udncoeln.com/"], :root a[href^="https://a.bestcontentfood.top/"], :root #ads > .dose > .dosesingle, :root .commercial-unit-mobile-top .jackpot-main-content-container > .UpgKEd + .nZZLFc > div > .vci, :root a[href*="delivery.trafficfabrik.com"], :root .trc_rbox_div .syndicatedItem, :root a[href^="http://www.streamate.com/exports/"], :root [href^="https://traffserve.com/"], :root [href*="maskip.co/"], :root div[class$="_b-ad-main"], :root a[href*=".trck5.com/"], :root a[href*=".qertewrt.com/"], :root .ob-widget > .ob-first.ob-widget-section, :root a[href*=".smartadserver.com"], :root a[href^="http://z1.zedo.com/"], :root a[href*=".irtyc.com/"], :root div[id^="div_ad_stack_"], :root a[href*=".ichlnk.com/"], :root a[href^="https://uncensored3d.com/"], :root a[href^="http://adf.ly/?id="], :root a[href^="https://usenetxs.website/"], :root a[href^="http://pokershibes.com/index.php?ref="], :root a[href^="http://api.content.ad/"], :root a[href*=".clkcln.com/"], :root [data-ad-manager-id], :root div[class^="adUnit_"], :root a[href^="https://deliver.tf2www.com/"], :root a[href^="http://spygasm.com/track?"], :root .ob_dual_right > .ob_ads_header ~ .odb_div, :root [src*="//www.dianomi.com/smartads.epl"], :root a[href*=".adk2x.com/"], :root a[href^="http://www.friendlyadvertisements.com/"], :root a[href^="http://www.firstload.com/affiliate/"], :root a[href^="http://duckcash.eu/"], :root a[href^="http://www.mobileandinternetadvertising.com/"], :root [href^="https://join.playboyplus.com/track/"], :root a[data-url^="http://paid.outbrain.com/network/redir?"] + .author, :root [href^="https://www.reimageplus.com/"], :root div[id^="cns_ads_"], :root a[data-obtrack^="http://paid.outbrain.com/network/redir?"], :root a[href^="https://prf.hn/click/"][href*="/adref:"] > img, :root a[href^="http://enter.anabolic.com/track/"], :root a[data-nvp*="'trafficUrl':'https://paid.outbrain.com/network/redir?"], :root a[href^="http://a63t9o1azf.com/"], :root a[href*=".axdsz.pro/"], :root a[href^="http://www.badoink.com/go.php?"], :root a[class="RBAd"], :root a[href^="http://banners.victor.com/processing/"], :root [href^="http://raboninco.com/"], :root a[href^="http://www.getyourguide.com/?partner_id="], :root [onclick^="window.open('https://www.brazzersnetwork.com/landing/"], :root [href^="http://join.rodneymoore.com/"], :root [id*="MarketGid"], :root a[href^="http://espn.zlbu.net/"], :root a[href^="http://admrotate.iplayer.org/"], :root a[href^="https://scurewall.co/"], :root div[class*="_browserAdOuterContainer_"], :root [name^="google_ads_iframe"], :root a[href^="http://fsoft4down.com/"], :root a[href*="ad2upapp.com/"], :root a[href*=".fwd28.com/"], :root [lazy-ad="leftbottom_banner"], :root dile-cookies-consent, :root [id^="div-gpt-ad"], :root a[href^="https://playuhd.host/"], :root [href^="https://go.affiliatexe.com/"], :root a[href^="http://mgid.com/"], :root a[href*=".adsrv.eacdn.com/"] > img, :root [href^="https://ptwmjmp.com/"], :root [href*="//etracking.pro"], :root a[href^="http://www.fonts.com/BannerScript/"], :root a[href^="http://c.ketads.com/"], :root a[href^="http://6kup12tgxx.com/"], :root [href^="https://freecourseweb.com/"] > .sitefriend, :root [href^="https://www.hostg.xyz/aff_c"] > img, :root [href*="//trackout.business"], :root [href^="https://veepn.g2afse.com/"], :root a[href^="https://syndication.exoclick.com/splash.php?"], :root a[data-oburl^="http://paid.outbrain.com/network/redir?"], :root a[href^="http://refpa.top/"], :root a[href*="//bongacams.com/track?"], :root a[href^="https://servedbyadbutler.com/"], :root a[href^="https://www.bet365.com/"][href*="affiliate="], :root a[href^="https://mob1ledev1ces.com/"], :root a[data-redirect^="http://paid.outbrain.com/network/redir?"], :root a[href^="https://promo-bc.com/"], :root a[href^="https://explore.findanswersnow.net/"], :root [id^="adframe_wrap_"], :root div[jsdata*="CarouselPLA-"][data-id^="CarouselPLA-"], :root a[href^="https://go.trackitalltheway.com/"], :root [data-template-type="nativead"], :root [href^="https://track.fiverr.com/visit/"] > img, :root a[href^="https://traffic.bannerator.com/"], :root [href^="https://shiftnetwork.infusionsoft.com/go/"] > img, :root a[href^="http://www.roboform.com/php/land.php"], :root div[id^="yandex_ad"], :root a[href^="https://www.pornhat.com/"][rel="nofollow"], :root a[href^="https://www.hotgirls4fuck.com/"], :root a[href*=".frtyl.com/"], :root a[href^="http://y1jxiqds7v.com/"], :root [href^="https://online-protection-now.com/"], :root a[href^="http://refpaano.host/"], :root a[href*="/cmd.php?ad="], :root a[href^="http://online.ladbrokes.com/promoRedirect?"], :root a[href^="//mob1ledev1ces.com/"], :root [href^="https://go.4rabettraff.com/"], :root a[href^="https://delivery.porn.com/"], :root a[href^="https://www.firstload.com/affiliate/"], :root .trc_related_container div[data-item-syndicated="true"], :root a[href^="http://liversely.net/"], :root a[href^="http://www.coiwqe.site/"], :root iframe[id^="google_ads_frame"], :root a[href^="http://www.bet365.com/"][href*="affiliate="], :root a[href^="http://www.bluehost.com/track/"] > img, :root a[data-url^="http://paid.outbrain.com/network/redir?"], :root a[href^="https://www.popads.net/users/"], :root a[href^="http://www.advcashpro.com/aff/"], :root a[href^="http://adultfriendfinder.com/p/register.cgi?pid="], :root [class*="-slot_ad-placements-"], :root a[href^="https://keep2share.cc/pr/"], :root a[href^="https://msecure117.com/"], :root [href^="http://stvkr.com/"], :root a[href^="http://secure.hostgator.com/~affiliat/"], :root [onclick^="window.open('http://adultfriendfinder.com/search/"], :root [onclick^="window.open('window.open('//delivery.trafficfabrik.com/"], :root [href^="/admdownload.php"], :root iframe[src^="http://ad.yieldmanager.com/"], :root a[href^="http://pubads.g.doubleclick.net/"], :root a[href^="https://porntubemate.com/"], :root a[href^="http://www.gfrevenge.com/landing/"], :root a[href^="http://45eijvhgj2.com/"], :root a[href^="http://hpn.houzz.com/"], :root div[id^="ad_bigbox_"], :root #content > #right > .dose > .dosesingle, :root a[href^="http://9nl.es/"], :root a[href^="https://deliver.ptgncdn.com/"], :root a[href^="http://latestdownloads.net/download.php?"], :root [href^="https://www.targetingpartner.com/"], :root a[href^="http://see-work.info/"], :root a[href*=".orange2258.com/"], :root #taw > .med + div > #tvcap > .mnr-c:not(.qs-ic) > .commercial-unit-mobile-top, :root .plista_widget_belowArticleRelaunch_item[data-type="pet"], :root a[data-oburl^="https://paid.outbrain.com/network/redir?"], :root a[href^="http://affiliates.score-affiliates.com/"], :root a[href^="https://wantopticalfreelance.com/"], :root [href^="/ucdownload.php"], :root [id^="ad-wrap-"], :root div[id^="ad-gpt-"], :root a[href^="http://pan.adraccoon.com?"], :root div[data-contentexchange-widget], :root [href^="http://www.star-clicks.com/"], :root [href^="http://join.hardcoreshemalevideo.com/"], :root a[href^="http://ads2.williamhill.com/redirect.aspx?"], :root a[href*=".xromp.com/landing/click/"], :root a[href^="http://www.download-provider.org/"], :root a[href^="https://10dfkuvbdkfv.club/"], :root AD-TRIPLE-BOX, :root [class^="Ad-adContainer"], :root a[href^="https://freeadult.games/"], :root a[href^="http://adserving.unibet.com/"], :root [id*="ScriptRoot"], :root a[href^="http://fileboom.me/pr/"], :root a[href*=".trust.zone"], :root a[href^="https://adsrv4k.com/"], :root a[href^="http://trk.mdrtrck.com/"], :root [href^="https://shrugartisticelder.com"], :root [href^="https://refpahrwzjlv.top/"], :root a[href^="http://czotra-32.com/"], :root a[href^="http://click.payserve.com/"], :root a[href^="http://serve.williamhill.com/promoRedirect?"], :root [class*="__adspot-title-container"], :root a[href*="n47adshostnet.com/"], :root a[href*=".cfm?fp="][href*="&prvtof="], :root [href*=".mclick.net"], :root [href*=".grtya.com/"], :root a[href^="http://tezfiles.com/pr/"], :root div[class^="Ad__container"], :root a[href^="http://adprovider.adlure.net/"], :root a[id^="ads_banner_"], :root a[href^="http://findersocket.com/"], :root a[href^="https://porngames.adult/?SID="], :root div[id^="adspot-"], :root #\5f _admvnlb_modal_container, :root a[href^="http://www.streamtunerhd.com/signup?"], :root div[class^="hp-ad-rect-"], :root a[href^="http://dwn.pushtraffic.net/"], :root a[href$="/vghd.shtml"], :root div[id^="crt-"][style], :root a[href^="http://igromir.info/"], :root div[id^="div-ads-"], :root a[onmousedown^="this.href='https://paid.outbrain.com/network/redir?"][target="_blank"] + .ob_source, :root a[href^="http://at.atwola.com/"], :root a[href^="https://www.g4mz.com/"], :root a[href^="http://webgirlz.online/landing/"], :root [href*="cadsecs.com/"], :root a[href*=".opskln.com/"], :root a[href^="http://xads.zedo.com/"], :root [class^="div-gpt-ad"], :root [class*="auto-bottom-advertising-"], :root a[href^="https://t.mobtya.com/"], :root a[href^="https://www.adxtro.com/"], :root [class*="__adv-block"], :root a[href^="https://farm.plista.com/pets"], :root a[href*=".red90121.com/"], :root a[href^="http://www.afgr3.com/"], :root [ad-id^="googlead"], :root [href^="https://rapidgator.net/article/premium/ref/"], :root [href^="https://bulletprofitsmartlink.com/"], :root [href^="https://join3.bannedsextapes.com"], :root [href^="https://join.girlsoutwest.com/"], :root a[href^="http://taboola-"][href*="/redirect.php?app.type="], :root a[href^="http://www.menaon.com/installs/"], :root a[href^="https://financeads.net/tc.php?"], :root .commercial-unit-mobile-top .jackpot-main-content-container > .UpgKEd + .nZZLFc > .vci, :root a[href^="https://www.oneclickroot.com/?tap_a="] > img, :root a[href^="//porngames.adult/?SID="], :root DFP-AD, :root a[href^="https://mmwebhandler.aff-online.com/"], :root [href^="https://r.kraken.com/"], :root a[href^="http://www.pinkvisualpad.com/?revid="], :root a[href^="https://www.friendlyduck.com/AF_"], :root [href^="http://advertisesimple.info/"], :root [lazy-ad="lefttop_banner"], :root a[href^="https://a.adtng.com/"], :root a[href^="http://static.fleshlight.com/images/banners/"], :root a[href^="https://www.adskeeper.co.uk/"], :root [href^="https://www.highrevenuecpm.com"], :root a[href^="https://secure.cbdpure.com/aff/"], :root AMP-AD, :root a[href^="https://syndication.dynsrvtbg.com/splash.php?"], :root [href^="http://join.trannies-fuck.com/"], :root a[href^="http://aflrm.com/"], :root div[id^="google_dfp_"], :root [href*="get-download.club/"], :root [href^="https://www.xvbelink.com/"], :root a[href^="http://affiliates.pinnaclesports.com/processing/"], :root #header + #content > #left > #rlblock_left, :root a[href^="http://partners.etoro.com/"], :root [id^="google_ads_iframe"], :root .vid-present > .van_vid_carousel__padding, :root a[href^="http://goldmoney.com/?gmrefcode="], :root a[href^="http://papi.mynativeplatform.com:80/pub2/"], :root LEADERBOARD-AD, :root .plistaList > .plista_widget_underArticle_item[data-type="pet"], :root [href^="http://join.shemale.xxx/"], :root a[href^="https://www.oboom.com/ad/"], :root [href*=".adcampo.com/"], :root [href^="https://pulsetrack.biz/"], :root a[href^="https://trackjs.com/?utm_source"], :root AFS-AD, :root a[href^="https://secure.starsaffiliateclub.com/C.ashx?"], :root .trc_rbox_div .syndicatedItemUB, :root [href*=".xiloy.site/"], :root [src^="http://api.lanistaads.com/ServeAd?"], :root a[href^="http://webtrackerplus.com/"], :root [href*=".jetx.info/"], :root [href*=".trackout.business"], :root a[href^="http://get.slickvpn.com/"], :root [data-ad-module], :root a[href*=".allsports4you.club"], :root a[href^="https://track.bruceads.com/"], :root a[href^="https://m.do.co/c/"] > img, :root [href*=".ltroute.com/"], :root div[class*="margin-Advert"], :root a[href^="//jsmptjmp.com/"] { display: none !important; }
+  :root a[href*=".adform.net/"], :root a[href^="http://www.onwebcam.com/random?t_link="], :root a[href*="//promo-bc.com/track?"], :root a[href^="https://sexsimulator.game/tab/?SID="], :root .rc-cta[data-target], :root a[href^="https://as.sexad.net/"], :root a[href^="//40ceexln7929.com/"], :root a[href$="/5-"][target="_blank"][rel="nofollow"], :root a[href*=".revimedia.com/"], :root [href*=".securesafemembers.com"], :root a[href^="https://secure.adnxs.com/clktrb?"], :root a[href^="http://adserver.adtechus.com/"], :root a[href^="https://topoffers.com/"][href*="/?pid="], :root a[href^="http://vinfdv6b4j.com/"], :root [href^="https://dooloust.net/"], :root a[href*=".surfmdia.com/"], :root .commercial-unit-mobile-top > div[data-pla="1"], :root [data-freestar-ad], :root [href*=".revrtb.com/"], :root a[href^="https://goraps.com/"], :root [href*=".etracking.pro"] { display: none !important; }</style><script charset="utf-8" src="/packs/js/public_layout_v3_async-c636a3750107fe22ba23.chunk.js"></script></head>
+  <body class="public_layout_v3 home-index es-MX" data-page="home-index" data-device="" data-new-gr-c-s-check-loaded="14.1037.0" data-gr-ext-installed="">
+      <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBG82P" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+      </noscript>
+  
+    <div class="general_wrapper">
+      <div data-react-class="SsrHeader" data-react-props="{&quot;title&quot;:{&quot;t&quot;:&quot;Smart Fit - #TeLaPoneFácil&quot;,&quot;url&quot;:&quot;/&quot;},&quot;menu&quot;:[{&quot;t&quot;:&quot;Gimnasios&quot;,&quot;url&quot;:&quot;https://smartfit.com.mx/unidades&quot;},{&quot;t&quot;:&quot;Tu espacio&quot;,&quot;url&quot;:&quot;https://smartfit.com.mx/person_sessions/new&quot;},{&quot;t&quot;:&quot;BLOG&quot;,&quot;url&quot;:&quot;https://blog.smartfit.com.mx/&quot;},{&quot;t&quot;:&quot;promociones&quot;,&quot;url&quot;:&quot;https://smartfit.com.mx/promociones&quot;},{&quot;t&quot;:&quot;Smart Fit Go&quot;,&quot;url&quot;:&quot;https://smartfit.com.mx/smartfitgo2021&quot;}],&quot;modalMenuList&quot;:[{&quot;t&quot;:&quot;Inicio&quot;,&quot;url&quot;:&quot;/&quot;},{&quot;t&quot;:&quot;Gimnasios&quot;,&quot;url&quot;:&quot;/gimnasios&quot;},{&quot;t&quot;:&quot;Planes&quot;,&quot;url&quot;:&quot;/planes&quot;},{&quot;t&quot;:&quot;Conoce Smart Fit&quot;,&quot;url&quot;:&quot;/sobre&quot;},{&quot;t&quot;:&quot;Tu espacio&quot;,&quot;url&quot;:&quot;/person_sessions/new&quot;,&quot;icon&quot;:{&quot;name&quot;:&quot;lock&quot;,&quot;className&quot;:&quot;Menu__list__icon&quot;}},{&quot;t&quot;:&quot;Smart Fit Nutri&quot;,&quot;url&quot;:&quot;https://www.smartfit.com.mx/nutri&quot;,&quot;target&quot;:&quot;_blank&quot;},{&quot;t&quot;:&quot;Prensa&quot;,&quot;url&quot;:&quot;/imprensa&quot;}],&quot;modalMenuListFooter&quot;:[{&quot;t&quot;:&quot;Preguntas Frecuentes&quot;,&quot;url&quot;:&quot;/faq&quot;,&quot;icon&quot;:&quot;faq&quot;},{&quot;t&quot;:&quot;Contáctanos&quot;,&quot;url&quot;:&quot;/hable-con-nosostros&quot;}]}" data-hydrate="t" data-react-cache-id="SsrHeader-0"><header class="public_layout_v3__header" data-reactroot=""><div class="Header__wrapper"><a href="/" class="Header__logo" title="Smart Fit - #TeLaPoneFácil"></a><menu class="public_layout_v3__menu"><div class="Menu__wrapper"><nav class="Menu__navigation"><ul class="Menu__list"><li class="Menu__item"><a href="https://smartfit.com.mx/unidades" class="Menu__link">Gimnasios</a></li><li class="Menu__item"><a href="https://smartfit.com.mx/person_sessions/new" class="Menu__link">Tu espacio</a></li><li class="Menu__item"><a href="https://blog.smartfit.com.mx/" class="Menu__link">BLOG</a></li><li class="Menu__item"><a href="https://smartfit.com.mx/promociones" class="Menu__link">promociones</a></li><li class="Menu__item"><a href="https://smartfit.com.mx/smartfitgo2021" class="Menu__link">Smart Fit Go</a></li></ul></nav></div></menu><a href="#" class="Menu__icon"><svg height="24" viewBox="0 -53 384 384" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"></path><path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"></path><path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"></path></svg></a></div></header></div>
+  
+      <article class="general_content">
+        
+  
+  
+  <main id="app" class="covid js-home-covid" data-locales-about="{&quot;table&quot;:{&quot;a&quot;:&quot;Todo lo que  \u003cspan class='text-primary title-gotham-black'\u003enecesitas\u003c/span\u003e&quot;,&quot;b&quot;:&quot;Un ecosistema de fitness que ofrece más libertad a la hora de entrenar.&quot;,&quot;c&quot;:&quot;Salón de clases&quot;,&quot;c1&quot;:&quot;Peso Integrado&quot;,&quot;c2&quot;:&quot;Funcional&quot;,&quot;c3&quot;:&quot;Cardio&quot;,&quot;c4&quot;:&quot;Entrenamientos para hacer donde quieras&quot;,&quot;c4a&quot;:&quot;fitness-remote&quot;,&quot;c5&quot;:&quot;Todo en la palma de tu mano&quot;,&quot;c5a&quot;:&quot;fitness-app&quot;},&quot;modifiable&quot;:true}" data-locales-covid="{&quot;table&quot;:{&quot;a&quot;:&quot;Vamos a vencer \u003cspan class='text-primary title-gotham-black'\u003eal COVID-19\u003c/span\u003e&quot;,&quot;b&quot;:&quot;\u003cstrong\u003eNecesitamos de tu ayuda\u003c/strong\u003e. Solo así vamos a lograr un Smart Fit más seguro para todos.&quot;,&quot;c&quot;:&quot;Cambios \u003cspan class='title-gotham-black'\u003eimportantes\u003c/span\u003e&quot;,&quot;d&quot;:&quot;desinfección completa&quot;,&quot;d1&quot;:&quot;Vamos a desinfectar cada área del gimnasio con un equipo especial \u003cstrong\u003evarias veces al día.\u003c/strong\u003e&quot;,&quot;d2&quot;:&quot;desinfeccao&quot;,&quot;e&quot;:&quot;distancia entre equipos&quot;,&quot;e1&quot;:&quot;Deshabilitamos la mitad de los equipos de cardio para poder mantener una \u003cstrong\u003esana distancia.\u003c/strong\u003e&quot;,&quot;e2&quot;:&quot;distancia&quot;,&quot;f&quot;:&quot;reserva un horario&quot;,&quot;f1&quot;:&quot;En algunas unidades, deberás realizar una reserva desde \u003cstrong\u003eTu Espacio\u003c/strong\u003e antes de acudir a Smart Fit.&quot;,&quot;f2&quot;:&quot;agende&quot;,&quot;g&quot;:&quot;termómetro digital&quot;,&quot;g1&quot;:&quot;Antes de ingresar al gimnasio, mediremos tu temperatura. Si estuviera \u003cstrong\u003epor arriba de los 37.5ºC\u003c/strong\u003e, te solicitaremos regresar a casa.&quot;,&quot;g2&quot;:&quot;termometro&quot;,&quot;h&quot;:&quot;uso de cubrebocas&quot;,&quot;h1&quot;:&quot;El cubrebocas \u003cstrong\u003ees obligatorio.\u003c/strong\u003e Todo nuestro staff debe utilizarlo, así como los usuarios.&quot;,&quot;h2&quot;:&quot;usaremos-mascara&quot;,&quot;i&quot;:&quot;tapetes sanitizantes&quot;,&quot;i1&quot;:&quot;Colocamos tapetes sanitizantes en la entrada para \u003cstrong\u003edesinfectar tu calzado.\u003c/strong\u003e&quot;,&quot;i2&quot;:&quot;tapetes&quot;,&quot;j&quot;:&quot;Cuidados \u003cspan class='title-gotham-black'\u003ebásicos\u003c/span\u003e&quot;,&quot;k&quot;:&quot;Usa \u003cspan class='text-primary'\u003ecubrebocas\u003c/span\u003e&quot;,&quot;k1&quot;:&quot;\u003cstrong\u003eEs obligatorio\u003c/strong\u003e utilizar cubrebocas. Este debe cubrir nariz y boca para evitar esparcir gotas de saliva.&quot;,&quot;l&quot;:&quot;Lleva \u003cspan class='text-primary'\u003etu agua\u003c/span\u003e&quot;,&quot;l1&quot;:&quot;Si puedes, \u003cstrong\u003elleva tu propia botella de agua.\u003c/strong\u003e Para usar los dispensadores de agua debes llevar tu propia botella.&quot;,&quot;m&quot;:&quot;Alcohol al \u003cspan class='text-primary'\u003e70%\u003c/span\u003e&quot;,&quot;m1&quot;:&quot;En todas las áreas del gimnasio contamos con gel 70% alcohol \u003cstrong\u003epara sanitizar tus manos.\u003c/strong\u003e&quot;,&quot;n&quot;:&quot;\u003cspan class=\&quot;translation_missing\&quot; title=\&quot;translation missing: es-MX.v3.home.covid.n\&quot;\u003eN\u003c/span\u003e&quot;,&quot;o&quot;:&quot;VAMOS JUNTOS&quot;,&quot;p&quot;:&quot;https://www.smartfit.com.mx/reaperturas&quot;},&quot;modifiable&quot;:true}">
+    <section id="main-banner-carousel">
+    <div id="main-banner-carousel-items">
+  
+  
+        <div class="carousel-item">
+          <div>
+            <a class="covid__banner" href="https://www.smartfit.com.mx/gimnasios" title="Comece Agora" data-campaign-id="78">
+              <img src="https://assets.smartfit.com.br/attachments/617b7e01fb2b43b2c073810094555e6ff37b7c5f/store/521e85b98c85d3f3b2a83eda01389b436c9243b06936d62b7d2e9a1962b8/banner_mobile" data-src="https://assets.smartfit.com.br/attachments/617b7e01fb2b43b2c073810094555e6ff37b7c5f/store/521e85b98c85d3f3b2a83eda01389b436c9243b06936d62b7d2e9a1962b8/banner_mobile" class="carousel-item-mobile ls-is-cached lazyloaded" width="320" height="768">
+              <img src="https://assets.smartfit.com.br/attachments/ae61ea564b9feb74741821e012e46039b3f5f3bc/store/60508452c87cb09822baea25dad578e45be42a0e9ab787c9eca05ddd76d2/banner_desktop" data-src="https://assets.smartfit.com.br/attachments/ae61ea564b9feb74741821e012e46039b3f5f3bc/store/60508452c87cb09822baea25dad578e45be42a0e9ab787c9eca05ddd76d2/banner_desktop" class="carousel-item-desktop lazyloaded" width="768" height="380">
+            </a>
+          </div>
+        </div>
+  
+  
+        <div class="carousel-item">
+          <div>
+            <a class="covid__banner" href="https://www.smartnutriapp.com/mexico?lang=es" title="Comece Agora" data-campaign-id="182">
+              <img src="https://assets.smartfit.com.br/attachments/47fd37cab5b300c04a70c5945e28fa83efef5e81/store/a318969a883962b7ce0f19478862f6526fa851b681b65189a9eb735a9b94/banner_mobile" data-src="https://assets.smartfit.com.br/attachments/47fd37cab5b300c04a70c5945e28fa83efef5e81/store/a318969a883962b7ce0f19478862f6526fa851b681b65189a9eb735a9b94/banner_mobile" class="carousel-item-mobile ls-is-cached lazyloaded" width="320" height="768">
+              <img src="https://assets.smartfit.com.br/attachments/2a4264ff33b04150599df99bcd1683f2a8684f8f/store/ea9eff38b2bab27ca2ad3aca9a48035994e74255d29ecc2c17f9e21db0d9/banner_desktop" data-src="https://assets.smartfit.com.br/attachments/2a4264ff33b04150599df99bcd1683f2a8684f8f/store/ea9eff38b2bab27ca2ad3aca9a48035994e74255d29ecc2c17f9e21db0d9/banner_desktop" class="carousel-item-desktop lazyloaded" width="768" height="380">
+            </a>
+          </div>
+        </div>
+  
+      <aside class="carousel-arrow carousel-arrow-left carousel-arrow-disabled">
+        <img class=" ls-is-cached lazyloaded" data-src="https://cdn.smartfit.com.br/nossa-smart/left-arrow.svg" alt="left arrow" src="https://cdn.smartfit.com.br/nossa-smart/left-arrow.svg">
+      </aside>
+  
+      <aside class="carousel-arrow carousel-arrow-right">
+        <img class=" ls-is-cached lazyloaded" data-src="https://cdn.smartfit.com.br/nossa-smart/right-arrow.svg" alt="right arrow" src="https://cdn.smartfit.com.br/nossa-smart/right-arrow.svg">
+      </aside>
+    </div>
+  </section>
+  
+    <section class="bg-black">
+    <div class="container">
+      <div class="row justify-center">
+        <div class="col-md-9 mb-6 pt-3 text-center">
+          <div class="row justify-center">
+            <div class="col-md-12 mb-6">
+              <h2 class="text-primary mb-6 fz-28 title-gotham-black">
+                <span class="text-black">ELIGE </span> TU PLAN
+              </h2>
+              <p class="text-white fz-24 py-3">
+                Entrena con nosotros eligiendo un plan. Todos incluyen las áreas de cardio, peso integrado, peso libre, funcional, vestidores y más...
+              </p>
+            </div>
+  
+  
+                <div class="col-md-5 mt-6 my-6 md:mb-0">
+                  <div class="plano bg-white ">
+                    <div>
+                        <div class="badge">
+                          Con los <strong>mejores beneficios</strong>
+                        </div>
+  
+                      <div class="plano__header bg-blacker text-center py-4">
+                        <p class="fw-900 uppercase text-white fz-24">
+                          PLAN
+                        </p>
+                        <h2 class="text-primary uppercase">
+                          black
+                      </h2>
+                      </div>
+  
+                        <div class="plano__price bg-primary text-white">
+                          <div class="text-center text-black">
+                            <span class="text-white font-bold uppercase">
+                              DESDE
+                            </span>
+                            <br>
+                            <div class="text-4xl font-bold text-black formatted_membership_price">
+                              $ 499.00
+                            </div>
+                            <span class="font-bold uppercase text-black">
+                              
+                            </span>
+                          </div>
+                        </div>
+  
+                      <div class="plano__body px-5">
+                        <p class="fz-18 mb-6">
+                          Entrena en <strong>cualquiera de nuestras unidades en América Latina</strong>
+                        </p>
+                        <hr class="mb-6">
+                        <div class="text-gray fz-14 fw-900 uppercase mb-3">
+                          BENEFICIOS
+                        </div>
+  
+                          <p class="font-bold mb-6">
+                            Area de peso libre y peso integrado
+                          </p>
+                          <p class="font-bold mb-6">
+                            Sillones de masaje
+                          </p>
+                          <p class="font-bold mb-6">
+                            Acceso ilimitado
+                          </p>
+                          <p class="font-bold mb-6">
+                            Acceso a todas unidades Smart Fit
+                          </p>
+                          <p class="font-bold mb-6">
+                            Invitar un amigo
+                          </p>
+                          <p class="font-bold mb-6">
+                            Cabina de colágeno
+                          </p>
+                      </div>
+                    </div>
+  
+                    <div>
+                      <div class="plano__cta">
+                        <a href="/gimnasios" class="btn d-ib js-click-plano-cta" onclick="covid_cta_black_datalayer_push();" data-product-name="black">
+                          INSCRÍBETE AHORA
+                        </a>
+                      </div>
+  
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="col-md-5 mt-6 my-6 md:mb-0">
+                  <div class="plano bg-white plano-smart">
+                    <div>
+  
+                      <div class="plano__header bg-primary text-center py-4">
+                        <p class="fw-900 uppercase text-white fz-24">
+                          PLAN
+                        </p>
+                        <h2 class="text-black uppercase">
+                          smart
+                      </h2>
+                      </div>
+  
+                        <div class="plano__price bg-blacker text-white">
+                          <div class="text-center text-primary">
+                            <span class="text-white font-bold uppercase">
+                              DESDE
+                            </span>
+                            <br>
+                            <div class="text-4xl font-bold text-primary formatted_membership_price">
+                              $ 299.00
+                            </div>
+                            <span class="font-bold uppercase text-primary">
+                              
+                            </span>
+                          </div>
+                        </div>
+  
+                      <div class="plano__body px-5">
+                        <p class="fz-18 mb-6">
+                          Entrena cuando quieras <strong>en una sola unidad</strong>
+                        </p>
+                        <hr class="mb-6">
+                        <div class="text-gray fz-14 fw-900 uppercase mb-3">
+                          BENEFICIOS
+                        </div>
+  
+                          <p class="font-bold mb-6">
+                            Area de peso libre y peso integrado
+                          </p>
+                          <p class="font-bold mb-6">
+                            Acceso ilimitado
+                          </p>
+                          <p class="font-bold mb-6">
+                            Sin multa por cancelación
+                          </p>
+                      </div>
+                    </div>
+  
+                    <div>
+                      <div class="plano__cta">
+                        <a href="/gimnasios" class="btn d-ib js-click-plano-cta" onclick="covid_cta_smart_datalayer_push();" data-product-name="smart">
+                          INSCRÍBETE AHORA
+                        </a>
+                      </div>
+  
+                    </div>
+                  </div>
+                </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+    <section class="bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mb-6">
+          <h2 class="text-center fz-28 mb-6 title-gotham-black">
+            ¡Conocé tu <span class="text-primary title-gotham-black">nueva Smart Fit!</span>
+          </h2>
+          <p class="text-center fz-24 new_smart__description">
+            Entrenamiento online,  nutricionistas vía videollamada, ¡además de más de 900 unidades en Latinoamérica!
+          </p>
+        </div>
+      </div>
+  
+      <div class="row justify-around">
+        <div class="col-md-1"></div>
+        <div class="col-md-5 covid__new-smart-text text-center">
+          <div class="hide-mobile">
+            <h2 class="text-center fz-28 mb-6 title-gotham-black">
+              Una experiencia completa
+            </h2>
+            <p class="fz-24">
+              para que cuides tu salud donde quieras.
+            </p>
+          </div>
+        </div>
+        <div class="covid__new-smart-image col-md-6 text-center">
+          <img src="/images/fallback_image.gif" data-src="https://cdn.smartfit.com.br/nossa-smart/new_smart_image.png" class="lazyload" alt="Nueva Smart Fit">
+        </div>
+        <div class="hide-desk">
+          <h2 class="text-center fz-26 mb-6 title-gotham-black">
+            Una experiencia completa
+          </h2>
+          <p class="fz-24 text-center">
+            para que cuides tu salud donde quieras.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+      <div class="bg-white home__cta-digital-products-wrapper">
+    <section class="bg-white home__cta-digital-products">
+        <div class="home__cta-digital-products__card-list js-dot-carousel">
+          <ul class="dot-scroll">
+              <li class="dot-scroll-item-outer">
+                  
+  <div class="home__cta-digital-products__card">
+    <div class="home__cta-digital-products__card-img">
+      <div class="home__cta-digital-products__card-img-title">
+        <div class="home__cta-digital-products__card-img-title-1">
+          <span>Por sólo</span> $49.90
+          <span>/mensuales</span>
+        </div>
+        <div class="home__cta-digital-products__card-img-title-2">
+          
+        </div>
+      </div>
+      <div class="home__cta-digital-products__card-wrapper-desc">
+        <div class="home__cta-digital-products__card-title ">
+          Smart Fit Nutri
+          
+        </div>
+        <div class="home__cta-digital-products__card-desc">
+          <p>Mejora tu dieta con menús y recetas saludables diseñadas para ti, ademas 2 consultas gratis con tu plan mensual.</p>
+        </div>
+        <div class="home__cta-digital-products__card-cta-trigger">
+          <a class="home__cta-digital-products__card-button" href="https://www.smartnutriapp.com/mexico" target="_blank" data-product-id="2906587413032238">
+            <p>DESCARGA AHORA</p>
+          </a>
+        </div>
+      </div>
+      <img src="https://cdn.smartfit.com.br/nova-home/images/cta-new-nutri.jpg" alt="Smart Fit Nutri" title="Smart Fit Nutri">
+      <div class="gradient"></div>
+    </div>
+  </div>
+              </li>
+              <li class="dot-scroll-item-outer">
+                  
+  <div class="home__cta-digital-products__card">
+    <div class="home__cta-digital-products__card-img">
+      <div class="home__cta-digital-products__card-img-title">
+        <div class="home__cta-digital-products__card-img-title-1">
+          Exclusivo para Clientes
+          
+        </div>
+        <div class="home__cta-digital-products__card-img-title-2">
+          
+        </div>
+      </div>
+      <div class="home__cta-digital-products__card-wrapper-desc">
+        <div class="home__cta-digital-products__card-title ">
+          Smart Fit App
+          
+        </div>
+        <div class="home__cta-digital-products__card-desc">
+          <p>Descarga la app y consulta tu rutina completa, con videos explicativos de cada ejercicio, series y repeticiones. Además de acceso a Smart Fit Go.</p>
+        </div>
+        <div class="home__cta-digital-products__card-cta-trigger">
+          <a class="home__cta-digital-products__card-button" href="https://www.smartfit.com.mx/smartfitapp" target="_blank" data-product-id="">
+            <p>DESCÁRGALA AHORA</p>
+          </a>
+        </div>
+      </div>
+      <img src="https://cdn.smartfit.com.br/nova-home/images/cta-new-app.jpg" alt="Smart Fit App" title="Smart Fit App">
+      <div class="gradient"></div>
+    </div>
+  </div>
+              </li>
+              <li class="dot-scroll-item-outer">
+                  
+  <div class="home__cta-digital-products__card">
+    <div class="home__cta-digital-products__card-img">
+      <div class="home__cta-digital-products__card-img-title">
+        <div class="home__cta-digital-products__card-img-title-1">
+          Exclusivo para Clientes
+          
+        </div>
+        <div class="home__cta-digital-products__card-img-title-2">
+          
+        </div>
+      </div>
+      <div class="home__cta-digital-products__card-wrapper-desc">
+        <div class="home__cta-digital-products__card-title ">
+          Smart Fit GO
+          
+        </div>
+        <div class="home__cta-digital-products__card-desc">
+          <p>Lo mejor de tu gimnasio ¡en donde quieras! Los entrenamientos de Smart Fit Go pueden ser realizados  en cualquier lugar a cualquier hora.</p>
+        </div>
+        <div class="home__cta-digital-products__card-cta-trigger">
+          <a class="home__cta-digital-products__card-button" href="https://smartfitgo.com.mx" target="_blank" data-product-id="">
+            <p>INSCRÍBETE AHORA</p>
+          </a>
+        </div>
+      </div>
+      <img src="https://cdn.smartfit.com.br/nova-home/images/cta-new-go.jpg" alt="Smart Fit GO" title="Smart Fit GO">
+      <div class="gradient"></div>
+    </div>
+  </div>
+              </li>
+          </ul>
+        </div>
+      <ul class="dot-indicators">
+          <li class="dot-indicator">
+            <button class="dot-indicator-button" aria-pressed="false"></button>
+          </li>
+          <li class="dot-indicator">
+            <button class="dot-indicator-button" aria-pressed="false"></button>
+          </li>
+          <li class="dot-indicator">
+            <button class="dot-indicator-button" aria-pressed="false"></button>
+          </li>
+      </ul>
+    </section>
+  </div>
+  
+    <section class="bg-white">
+    <div class="container">
+      <div class="row justify-around">
+        <div class="col-md-12 text-center">
+          <h2 class="text-black mb-6 fz-28 title-gotham-black">
+            Vamos a vencer <span class="text-primary title-gotham-black">al COVID-19</span>
+          </h2>
+  
+          <p class="fz-24 mb-6 ">
+            <strong>Necesitamos de tu ayuda</strong>. Solo así vamos a lograr un Smart Fit más seguro para todos.
+          </p>
+  
+          <h3 class="text-black mb-6 title-gotham-black">
+            Cambios <span class="title-gotham-black">importantes</span>
+          </h3>
+  
+          <div class="mudancas">
+          <div class="card-mudancas">
+              <div class="card-mudancas__title">Desinfección completa</div>
+              <img class="lazyload" data-src="https://cdn.smartfit.com.br/covid/icon-desinfeccao.png" alt="">
+              <div class="card-mudancas__description">Vamos a desinfectar cada área del gimnasio con un equipo especial <strong>varias veces al día.</strong></div>
+          </div>
+        
+          <div class="card-mudancas">
+              <div class="card-mudancas__title">Distancia entre equipos</div>
+              <img class="lazyload" data-src="https://cdn.smartfit.com.br/covid/icon-distancia.png" alt="">
+              <div class="card-mudancas__description">Deshabilitamos la mitad de los equipos de cardio para poder mantener una <strong>sana distancia.</strong></div>
+          </div>
+        
+          <div class="card-mudancas">
+              <div class="card-mudancas__title">Reserva un horario</div>
+              <img class="lazyload" data-src="https://cdn.smartfit.com.br/covid/icon-agende.png" alt="">
+              <div class="card-mudancas__description">En algunas unidades, deberás realizar una reserva desde <strong>Tu Espacio</strong> antes de acudir a Smart Fit.</div>
+          </div>
+        
+          <div class="card-mudancas">
+              <div class="card-mudancas__title">Termómetro digital</div>
+              <img class="lazyload" data-src="https://cdn.smartfit.com.br/covid/icon-termometro.png" alt="">
+              <div class="card-mudancas__description">Antes de ingresar al gimnasio, mediremos tu temperatura. Si estuviera <strong>por arriba de los 37.5ºC</strong>, te solicitaremos regresar a casa.</div>
+          </div>
+        
+          <div class="card-mudancas">
+              <div class="card-mudancas__title">Uso de cubrebocas</div>
+              <img class="lazyload" data-src="https://cdn.smartfit.com.br/covid/icon-usaremos-mascara.png" alt="">
+              <div class="card-mudancas__description">El cubrebocas <strong>es obligatorio.</strong> Todo nuestro staff debe utilizarlo, así como los usuarios.</div>
+          </div>
+        
+          <div class="card-mudancas">
+              <div class="card-mudancas__title">Tapetes sanitizantes</div>
+              <img class="lazyload" data-src="https://cdn.smartfit.com.br/covid/icon-tapetes.png" alt="">
+              <div class="card-mudancas__description">Colocamos tapetes sanitizantes en la entrada para <strong>desinfectar tu calzado.</strong></div>
+          </div>
+        </div>
+        </div>
+        <!---
+        <div class="col-md-12 text-center">
+          <h3 class="text-black mb-6 title-gotham-black">
+            Cuidados <span class='title-gotham-black'>básicos</span>
+          </h3>
+        </div>
+  
+        <div class="col-md-3 my-6 md:mb-0 text-center">
+          <h4 class="text-black">
+            Usa <span class='text-primary'>cubrebocas</span>
+          </h4>
+  
+          <hr class="my-3" style="max-width: 80%; margin-left: auto" />
+  
+          <p class="fz-14">
+            <strong>Es obligatorio</strong> utilizar cubrebocas. Este debe cubrir nariz y boca para evitar esparcir gotas de saliva.
+          </p>
+        </div>
+  
+        <div class="col-md-3 my-6 md:mb-0 text-center">
+          <h4 class="text-black">
+            Lleva <span class='text-primary'>tu agua</span>
+          </h4>
+  
+          <hr class="my-3" style="max-width: 80%; margin-left: auto" />
+  
+          <p class="fz-14">
+            Si puedes, <strong>lleva tu propia botella de agua.</strong> Para usar los dispensadores de agua debes llevar tu propia botella.
+          </p>
+        </div>
+  
+        <div class="col-md-3 my-6 md:mb-0 text-center">
+          <h4 class="text-black">
+            Alcohol al <span class='text-primary'>70%</span>
+          </h4>
+          <hr class="my-3" style="max-width: 80%; margin-left: auto" />
+          <p class="fz-14">
+            En todas las áreas del gimnasio contamos con gel 70% alcohol <strong>para sanitizar tus manos.</strong>
+          </p>
+        </div>
+  -->
+          <div class="col-md-12 text-center">
+            <a href="https://www.smartfit.com.mx/reaperturas" class="btn btn-sm d-ib" onclick="covid_cta2_datalayer_push();">
+              VAMOS JUNTOS
+            </a>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+  
+    <section class="bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mb-6">
+          <h2 class="text-center fz-28 mb-6 title-gotham-black">
+            Todo lo que  <span class="text-primary title-gotham-black">necesitas</span>
+          </h2>
+          <p class="text-center fz-24">
+            Un ecosistema de fitness que ofrece más libertad a la hora de entrenar.
+          </p>
+        </div>
+      </div>
+      <div class="row mb-6 oferece">
+          <div class="col-md-4 mb-3 pt-3 oferece-item">
+              <img class="lazyload" data-src="https://cdn.smartfit.com.br/nossa-smart/img_cover_academia_aulas.jpg" alt="">
+              <h4>Salón de clases</h4>
+          </div>
+        
+          <div class="col-md-4 mb-3 pt-3 oferece-item">
+              <img class="lazyload" data-src="https://cdn.smartfit.com.br/nossa-smart/img_cover_academia_musculacao.jpg" alt="">
+              <h4>Peso Integrado</h4>
+          </div>
+        
+          <div class="col-md-4 mb-3 pt-3 oferece-item">
+              <img class="lazyload" data-src="https://cdn.smartfit.com.br/nossa-smart/img_cover_academia_funcional.jpg" alt="">
+              <h4>Funcional</h4>
+          </div>
+        
+          <div class="col-md-4 mb-3 pt-3 oferece-item">
+              <img class="lazyload" data-src="https://cdn.smartfit.com.br/nossa-smart/img_cover_academia_cardio.jpg" alt="">
+              <h4>Cardio</h4>
+          </div>
+        
+          <div class="col-md-4 mb-3 pt-3 oferece-item">
+              <img class="lazyload" data-src="https://cdn.smartfit.com.br/nossa-smart/img_cover_academia_fitness-remote.jpg" alt="">
+              <h4>Entrenamientos para hacer donde quieras</h4>
+          </div>
+        
+          <div class="col-md-4 mb-3 pt-3 oferece-item">
+              <img class="lazyload" data-src="https://cdn.smartfit.com.br/nossa-smart/img_cover_academia_fitness-app.jpg" alt="">
+              <h4>Todo en la palma de tu mano</h4>
+          </div>
+        </div>
+    </div>
+  </section>
+  
+  </main>
+  
+  
+      </article>
+  
+      <div class="public_layout_v3__newsletter">
+    <div class="Newsletter">
+    <h5 class="Newsletter__title">Recibe las novedades y promociones exclusivas de Smart Fit</h5>
+  
+    <form class="new_lead" id="new_lead" action="/leads" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="Qfi93bYurM5BkLhAjFOpMgZImbBm7vyxV7jPV0LyK22IktB0EgX9DP50U8KzQFvd3/UEcRA9zJToEVWRa7pojA==">
+      <div class="Newsletter__field">
+        <div class="name_1636034798"><style media="screen">.name_1636034798 {position:absolute!important;height:1px;width:1px;overflow:hidden;}</style><label for="lead_name">Si eres humano, ignora este campo</label><input type="text" name="lead[name]" id="lead_name" tabindex="-1"></div>
+        <input class="Newsletter__input" placeholder="Ingresa tu correo electrónico" type="text" name="lead[email]" id="lead_email">
+        <input type="submit" name="commit" value="Regístrate" class="Newsletter__button">
+      </div>
+  </form></div>
+  
+  </div>
+  
+  
+      <div data-react-class="SsrFooter" data-react-props="{&quot;logoImageName&quot;:&quot;logo-slogan-es.png&quot;,&quot;data&quot;:{&quot;institutional&quot;:[{&quot;id&quot;:28,&quot;name&quot;:&quot;Quienes somos&quot;,&quot;link&quot;:&quot;https://www.smartfit.com.mx/sobre&quot;,&quot;iconSvg&quot;:null,&quot;iconSlug&quot;:null},{&quot;id&quot;:37,&quot;name&quot;:&quot;Hable con nosotros&quot;,&quot;link&quot;:&quot;https://www.smartfit.com.mx/hable-con-nosostros&quot;,&quot;iconSvg&quot;:null,&quot;iconSlug&quot;:null},{&quot;id&quot;:43,&quot;name&quot;:&quot;Smart Fit Nutri&quot;,&quot;link&quot;:&quot;https://www.smartnutriapp.com/mexico?lang=es&quot;,&quot;iconSvg&quot;:null,&quot;iconSlug&quot;:null}],&quot;plan&quot;:[{&quot;id&quot;:29,&quot;name&quot;:&quot;Planes&quot;,&quot;link&quot;:&quot;https://www.smartfit.com.mx/planos&quot;,&quot;iconSvg&quot;:null,&quot;iconSlug&quot;:null},{&quot;id&quot;:35,&quot;name&quot;:&quot;Documentos&quot;,&quot;link&quot;:&quot;https://www.smartfit.com.mx/contratos&quot;,&quot;iconSvg&quot;:null,&quot;iconSlug&quot;:null}],&quot;corporative&quot;:[{&quot;id&quot;:39,&quot;name&quot;:&quot;Quiero ser franquiciatario&quot;,&quot;link&quot;:&quot;https://www.smartfit.com.mx/quiero-ser-franquiciatario&quot;,&quot;iconSvg&quot;:null,&quot;iconSlug&quot;:null},{&quot;id&quot;:40,&quot;name&quot;:&quot;Promociona tu marca&quot;,&quot;link&quot;:&quot;https://www.smartfit.com.mx/promociona-tu-marca&quot;,&quot;iconSvg&quot;:null,&quot;iconSlug&quot;:null},{&quot;id&quot;:41,&quot;name&quot;:&quot;Indica un local&quot;,&quot;link&quot;:&quot;https://www.smartfit.com.mx/indica-un-local&quot;,&quot;iconSvg&quot;:null,&quot;iconSlug&quot;:null},{&quot;id&quot;:42,&quot;name&quot;:&quot;Trabaja con nosotros&quot;,&quot;link&quot;:&quot;https://www.smartfit.com.mx/trabaja-con-nosotros&quot;,&quot;iconSvg&quot;:null,&quot;iconSlug&quot;:null}],&quot;social&quot;:[{&quot;id&quot;:27,&quot;name&quot;:&quot;Facebook&quot;,&quot;link&quot;:&quot;https://www.facebook.com/SmartFitMx/&quot;,&quot;iconSvg&quot;:&quot;\u003csymbol id=\&quot;Icon--facebook-16f9a964\&quot; viewBox=\&quot;0 0 96.124 96.123\&quot;\u003e\n          \u003cg\u003e\n\t\u003cpath d=\&quot;M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803   c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654   c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246   c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z\&quot;/\u003e\u003c/path\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n        \u003c/symbol\u003e&quot;,&quot;iconSlug&quot;:&quot;facebook-16f9a964&quot;},{&quot;id&quot;:30,&quot;name&quot;:&quot;Instagram&quot;,&quot;link&quot;:&quot;https://www.instagram.com/smartfitmx/&quot;,&quot;iconSvg&quot;:&quot;\u003csymbol id=\&quot;Icon--instagram-9fb3cf16\&quot; viewBox=\&quot;0 0 169.063 169.063\&quot;\u003e\n          \u003cg\u003e\n\t\u003cpath d=\&quot;M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752   c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407   c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752   c17.455,0,31.656,14.201,31.656,31.655V122.407z\&quot;/\u003e\u003c/path\u003e\n\t\u003cpath d=\&quot;M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561   C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561   c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z\&quot;/\u003e\u003c/path\u003e\n\t\u003cpath d=\&quot;M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78   c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78   C135.661,29.421,132.821,28.251,129.921,28.251z\&quot;/\u003e\u003c/path\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n        \u003c/symbol\u003e&quot;,&quot;iconSlug&quot;:&quot;instagram-9fb3cf16&quot;},{&quot;id&quot;:31,&quot;name&quot;:&quot;Youtube&quot;,&quot;link&quot;:&quot;https://www.youtube.com/channel/UCseuJHoMhh5FWuZWBrQt1MQ&quot;,&quot;iconSvg&quot;:&quot;\u003csymbol id=\&quot;Icon--youtube-35d41cde\&quot; viewBox=\&quot;0 0 512 512\&quot;\u003e\n          \u003cg\u003e\n\t\u003cg\u003e\n\t\t\u003cpath d=\&quot;M490.24,113.92c-13.888-24.704-28.96-29.248-59.648-30.976C399.936,80.864,322.848,80,256.064,80    c-66.912,0-144.032,0.864-174.656,2.912c-30.624,1.76-45.728,6.272-59.744,31.008C7.36,138.592,0,181.088,0,255.904    C0,255.968,0,256,0,256c0,0.064,0,0.096,0,0.096v0.064c0,74.496,7.36,117.312,21.664,141.728    c14.016,24.704,29.088,29.184,59.712,31.264C112.032,430.944,189.152,432,256.064,432c66.784,0,143.872-1.056,174.56-2.816    c30.688-2.08,45.76-6.56,59.648-31.264C504.704,373.504,512,330.688,512,256.192c0,0,0-0.096,0-0.16c0,0,0-0.064,0-0.096    C512,181.088,504.704,138.592,490.24,113.92z M192,352V160l160,96L192,352z\&quot;/\u003e\u003c/path\u003e\n\t\u003c/g\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n\u003cg\u003e\n\u003c/g\u003e\n        \u003c/symbol\u003e&quot;,&quot;iconSlug&quot;:&quot;youtube-35d41cde&quot;},{&quot;id&quot;:32,&quot;name&quot;:&quot;Twitter&quot;,&quot;link&quot;:&quot;https://twitter.com/smartfitmx&quot;,&quot;iconSvg&quot;:&quot;\u003csymbol id=\&quot;Icon--twitter-9c59d563\&quot; viewBox=\&quot;0 0 1332.279 935.43\&quot;\u003e\n          \u003cg\u003e\n\t\u003cg\u003e\n\t\t\u003cpath fill=\&quot;#FFFFFF\&quot; d=\&quot;M1133.855,177.698c-34.429,15.256-71.37,25.602-110.185,30.221    c39.632-23.732,69.969-61.376,84.348-106.093c-37.176,21.978-78.211,37.937-121.935,46.588    c-35.013-37.352-84.815-60.617-140.055-60.617c-105.976,0-191.902,85.927-191.902,191.844c0,15.022,1.695,29.694,4.969,43.724    c-159.46-8.009-300.858-84.407-395.494-200.497c-16.543,28.292-25.953,61.258-25.953,96.449    c0,66.579,33.903,125.324,85.343,159.694c-31.449-1.052-61.026-9.703-86.921-24.083v2.396c0,92.94,66.17,170.508,153.907,188.162    c-16.074,4.325-33.025,6.722-50.562,6.722c-12.392,0-24.375-1.227-36.124-3.565c24.433,76.282,95.279,131.754,179.219,133.274    c-65.644,51.439-148.414,82.011-238.314,82.011c-15.49,0-30.747-0.936-45.769-2.631c84.933,54.538,185.765,86.336,294.137,86.336    c353,0,545.955-292.384,545.955-545.954l-0.644-24.843C1075.577,249.946,1108.194,216.161,1133.855,177.698z\&quot;/\u003e\u003c/path\u003e\n\t\u003c/g\u003e\n\u003c/g\u003e\n        \u003c/symbol\u003e&quot;,&quot;iconSlug&quot;:&quot;twitter-9c59d563&quot;},{&quot;id&quot;:33,&quot;name&quot;:&quot;Twitter Ayuda&quot;,&quot;link&quot;:&quot;https://twitter.com/smartfitayuda&quot;,&quot;iconSvg&quot;:&quot;\u003csymbol id=\&quot;Icon--twitter-ayuda-99237761\&quot; viewBox=\&quot;0 0 1332.279 935.43\&quot;\u003e\n          \u003cpath fill=\&quot;#FFFFFF\&quot; d=\&quot;M656.812,52.215c-307.166,0-556.172,166.171-556.172,371.15c0,127.609,96.507,240.181,243.478,306.979  c49.244,100.223-14.179,146.37-14.179,146.37s107.332-10.093,214.663-88.101c487.87,0,668.381-160.266,668.381-365.245  C1212.983,218.384,963.977,52.215,656.812,52.215z M704.618,691.708H580.706V569.323h123.912V691.708z M843.058,309.266  c0,97.14-67.307,136.914-150.681,153.741l-8.414,46.66H605.95l-17.597-123.914l3.826-3.824  c96.374-3.822,133.855-29.067,133.855-69.604v-1.528c0-34.418-26.009-54.308-70.373-54.308c-42.833,0-79.547,17.59-114.728,52.777  l-70.374-77.254c44.368-48.95,104.029-82.605,187.392-82.605c110.146,0,185.104,56.599,185.104,158.328v1.532H843.058z\&quot;/\u003e\u003c/path\u003e\n        \u003c/symbol\u003e&quot;,&quot;iconSlug&quot;:&quot;twitter-ayuda-99237761&quot;},{&quot;id&quot;:34,&quot;name&quot;:&quot;Blog&quot;,&quot;link&quot;:&quot;http://blog.smartfit.com.mx/&quot;,&quot;iconSvg&quot;:&quot;\u003csymbol id=\&quot;Icon--blog-4f589cef\&quot; viewBox=\&quot;0 0 1332.279 935.43\&quot;\u003e\n          \u003cg\u003e\n\t\u003cg\u003e\n\t\t\u003cg\u003e\n\t\t\t\u003cg\u003e\n\t\t\t\t\u003cpath fill=\&quot;#FFFFFF\&quot; d=\&quot;M198.775,0v179.369c416.383,0,755.241,339.211,755.241,756.061h179.837      C1133.855,419.773,714.315,0,198.775,0z\&quot;/\u003e\u003c/path\u003e\n\t\t\t\t\u003cpath fill=\&quot;#FFFFFF\&quot; d=\&quot;M198.542,317.753v179.311c116.754,0,226.491,45.66,309.158,128.387      c82.552,82.494,128.155,192.757,128.155,309.979h180.129C815.985,594.815,538.922,317.753,198.542,317.753z\&quot;/\u003e\u003c/path\u003e\n\t\t\t\t\u003cpath fill=\&quot;#FFFFFF\&quot; d=\&quot;M322.954,685.904c-68.697,0-124.529,55.95-124.529,124.235c0,68.694,55.832,124.119,124.529,124.119      c68.93,0,124.704-55.425,124.704-124.119C447.601,741.972,391.884,685.904,322.954,685.904z\&quot;/\u003e\u003c/path\u003e\n\t\t\t\u003c/g\u003e\n\t\t\u003c/g\u003e\n\t\u003c/g\u003e\n\u003c/g\u003e\n        \u003c/symbol\u003e&quot;,&quot;iconSlug&quot;:&quot;blog-4f589cef&quot;}]},&quot;text&quot;:{&quot;institutional&quot;:&quot;Smart Fit&quot;,&quot;plan&quot;:&quot;Planes&quot;,&quot;corporative&quot;:&quot;Nuestra Compañia&quot;,&quot;social&quot;:&quot;Síguenos&quot;},&quot;show&quot;:{&quot;institutional&quot;:true,&quot;plan&quot;:true,&quot;corporative&quot;:true,&quot;social&quot;:true}}" data-hydrate="t" data-react-cache-id="SsrFooter-0"><div class="public_layout_v3__footer" data-reactroot=""><div class="Footer__wrapper"><div class="public_layout_v3__footer_logo"><div class="Footer__logo"><img src="/packs/media/logo-slogan-es-8d8b0a78.png"></div></div><div class="Footer__sections"><div class="Footer__section"><h3 class="Footer__section_title">Smart Fit</h3><ul class="Footer__section_list"><li class="Footer__section_list_item"><a href="https://www.smartfit.com.mx/sobre">Quienes somos</a></li><li class="Footer__section_list_item"><a href="https://www.smartfit.com.mx/hable-con-nosostros">Hable con nosotros</a></li><li class="Footer__section_list_item"><a href="https://www.smartnutriapp.com/mexico?lang=es">Smart Fit Nutri</a></li></ul></div><div class="Footer__section"><h3 class="Footer__section_title">Planes</h3><ul class="Footer__section_list"><li class="Footer__section_list_item"><a href="https://www.smartfit.com.mx/planos">Planes</a></li><li class="Footer__section_list_item"><a href="https://www.smartfit.com.mx/contratos">Documentos</a></li></ul></div><div class="Footer__section"><h3 class="Footer__section_title">Nuestra Compañia</h3><ul class="Footer__section_list"><li class="Footer__section_list_item"><a href="https://www.smartfit.com.mx/quiero-ser-franquiciatario">Quiero ser franquiciatario</a></li><li class="Footer__section_list_item"><a href="https://www.smartfit.com.mx/promociona-tu-marca">Promociona tu marca</a></li><li class="Footer__section_list_item"><a href="https://www.smartfit.com.mx/indica-un-local">Indica un local</a></li><li class="Footer__section_list_item"><a href="https://www.smartfit.com.mx/trabaja-con-nosotros">Trabaja con nosotros</a></li></ul></div><div class="Footer__section"><h3 class="Footer__section_title">Síguenos</h3><ul class="Footer__section_list"><li class="Footer__section_list_item"><a href="https://www.facebook.com/SmartFitMx/"><svg class="Icon--facebook-16f9a964 Footer__menu__icon"><use xmlns:xlink="http://www.w3.org/2000/xlink" xlink:href="#Icon--facebook-16f9a964"><symbol id="Icon--facebook-16f9a964" viewBox="0 0 96.124 96.123"><g><path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803   c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654   c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246   c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></symbol></use></svg>Facebook</a></li><li class="Footer__section_list_item"><a href="https://www.instagram.com/smartfitmx/"><svg class="Icon--instagram-9fb3cf16 Footer__menu__icon"><use xmlns:xlink="http://www.w3.org/2000/xlink" xlink:href="#Icon--instagram-9fb3cf16"><symbol id="Icon--instagram-9fb3cf16" viewBox="0 0 169.063 169.063"><g><path d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752   c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407   c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752   c17.455,0,31.656,14.201,31.656,31.655V122.407z"></path><path d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561   C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561   c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z"></path><path d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78   c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78   C135.661,29.421,132.821,28.251,129.921,28.251z"></path></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></symbol></use></svg>Instagram</a></li><li class="Footer__section_list_item"><a href="https://www.youtube.com/channel/UCseuJHoMhh5FWuZWBrQt1MQ"><svg class="Icon--youtube-35d41cde Footer__menu__icon"><use xmlns:xlink="http://www.w3.org/2000/xlink" xlink:href="#Icon--youtube-35d41cde"><symbol id="Icon--youtube-35d41cde" viewBox="0 0 512 512"><g><g><path d="M490.24,113.92c-13.888-24.704-28.96-29.248-59.648-30.976C399.936,80.864,322.848,80,256.064,80    c-66.912,0-144.032,0.864-174.656,2.912c-30.624,1.76-45.728,6.272-59.744,31.008C7.36,138.592,0,181.088,0,255.904    C0,255.968,0,256,0,256c0,0.064,0,0.096,0,0.096v0.064c0,74.496,7.36,117.312,21.664,141.728    c14.016,24.704,29.088,29.184,59.712,31.264C112.032,430.944,189.152,432,256.064,432c66.784,0,143.872-1.056,174.56-2.816    c30.688-2.08,45.76-6.56,59.648-31.264C504.704,373.504,512,330.688,512,256.192c0,0,0-0.096,0-0.16c0,0,0-0.064,0-0.096    C512,181.088,504.704,138.592,490.24,113.92z M192,352V160l160,96L192,352z"></path></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></symbol></use></svg>Youtube</a></li><li class="Footer__section_list_item"><a href="https://twitter.com/smartfitmx"><svg class="Icon--twitter-9c59d563 Footer__menu__icon"><use xmlns:xlink="http://www.w3.org/2000/xlink" xlink:href="#Icon--twitter-9c59d563"><symbol id="Icon--twitter-9c59d563" viewBox="0 0 1332.279 935.43"><g><g><path fill="#FFFFFF" d="M1133.855,177.698c-34.429,15.256-71.37,25.602-110.185,30.221    c39.632-23.732,69.969-61.376,84.348-106.093c-37.176,21.978-78.211,37.937-121.935,46.588    c-35.013-37.352-84.815-60.617-140.055-60.617c-105.976,0-191.902,85.927-191.902,191.844c0,15.022,1.695,29.694,4.969,43.724    c-159.46-8.009-300.858-84.407-395.494-200.497c-16.543,28.292-25.953,61.258-25.953,96.449    c0,66.579,33.903,125.324,85.343,159.694c-31.449-1.052-61.026-9.703-86.921-24.083v2.396c0,92.94,66.17,170.508,153.907,188.162    c-16.074,4.325-33.025,6.722-50.562,6.722c-12.392,0-24.375-1.227-36.124-3.565c24.433,76.282,95.279,131.754,179.219,133.274    c-65.644,51.439-148.414,82.011-238.314,82.011c-15.49,0-30.747-0.936-45.769-2.631c84.933,54.538,185.765,86.336,294.137,86.336    c353,0,545.955-292.384,545.955-545.954l-0.644-24.843C1075.577,249.946,1108.194,216.161,1133.855,177.698z"></path></g></g></symbol></use></svg>Twitter</a></li><li class="Footer__section_list_item"><a href="https://twitter.com/smartfitayuda"><svg class="Icon--twitter-ayuda-99237761 Footer__menu__icon"><use xmlns:xlink="http://www.w3.org/2000/xlink" xlink:href="#Icon--twitter-ayuda-99237761"><symbol id="Icon--twitter-ayuda-99237761" viewBox="0 0 1332.279 935.43"><path fill="#FFFFFF" d="M656.812,52.215c-307.166,0-556.172,166.171-556.172,371.15c0,127.609,96.507,240.181,243.478,306.979  c49.244,100.223-14.179,146.37-14.179,146.37s107.332-10.093,214.663-88.101c487.87,0,668.381-160.266,668.381-365.245  C1212.983,218.384,963.977,52.215,656.812,52.215z M704.618,691.708H580.706V569.323h123.912V691.708z M843.058,309.266  c0,97.14-67.307,136.914-150.681,153.741l-8.414,46.66H605.95l-17.597-123.914l3.826-3.824  c96.374-3.822,133.855-29.067,133.855-69.604v-1.528c0-34.418-26.009-54.308-70.373-54.308c-42.833,0-79.547,17.59-114.728,52.777  l-70.374-77.254c44.368-48.95,104.029-82.605,187.392-82.605c110.146,0,185.104,56.599,185.104,158.328v1.532H843.058z"></path></symbol></use></svg>Twitter Ayuda</a></li><li class="Footer__section_list_item"><a href="http://blog.smartfit.com.mx/"><svg class="Icon--blog-4f589cef Footer__menu__icon"><use xmlns:xlink="http://www.w3.org/2000/xlink" xlink:href="#Icon--blog-4f589cef"><symbol id="Icon--blog-4f589cef" viewBox="0 0 1332.279 935.43"><g><g><g><g><path fill="#FFFFFF" d="M198.775,0v179.369c416.383,0,755.241,339.211,755.241,756.061h179.837      C1133.855,419.773,714.315,0,198.775,0z"></path><path fill="#FFFFFF" d="M198.542,317.753v179.311c116.754,0,226.491,45.66,309.158,128.387      c82.552,82.494,128.155,192.757,128.155,309.979h180.129C815.985,594.815,538.922,317.753,198.542,317.753z"></path><path fill="#FFFFFF" d="M322.954,685.904c-68.697,0-124.529,55.95-124.529,124.235c0,68.694,55.832,124.119,124.529,124.119      c68.93,0,124.704-55.425,124.704-124.119C447.601,741.972,391.884,685.904,322.954,685.904z"></path></g></g></g></g></symbol></use></svg>Blog</a></li></ul></div></div></div></div></div>
+  
+      <div data-react-class="CookieConsent" data-react-props="{&quot;show&quot;:false,&quot;msg&quot;:&quot;Nós utilizamos cookies para personalizar anúncios e melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa política de privacidade.&quot;,&quot;btAcceptCookie&quot;:&quot;OK&quot;,&quot;btPrivacy&quot;:&quot;Saiba Mais&quot;,&quot;linkPrivacy&quot;:&quot;/documentos&quot;}" data-react-cache-id="CookieConsent-0"></div>
+    </div>
+  
+    <div class="public_layout_v3__footer_disclaimer">
+    <div class="Footer__wrapper">
+    </div>
+  </div>
+  
+    
+  
+  
+    
+  
+  
+      <script src="/packs/js/public_layout_v3-d8bd79d291f667f24372.js"></script>
+  
+    <script>
+      window.I18n = window.I18n || {};
+      window.I18n.defaultLocale = "pt-BR";
+      window.I18n.locale = "es-MX";
+      window.I18n.fallbacks = true;
+    </script>
+    
+      <script>
+       window.eecDataPromotionImpressionCarousel = JSON.parse('{"eventLabel":"carrossel home - retate black octubre","promotions":[{"id":"78","name":"#retate","creative":"banner #retate"},{"id":"182","name":"nutri app","creative":"banner smart nutri app"}]}')
+       window.eecDataProductImpressionHome = JSON.parse('{"impressions":[{"name":"black","id":"2","price":499.0,"category":"plano","position":1,"variant":null},{"name":"smart","id":"1","price":299.0,"category":"plano","position":2,"variant":null},{"name":"nutri","id":"2906587413032238","price":49.9,"category":"adicional","position":3,"variant":null}]}')
+    </script>
+    <script src="https://cdn.smartfit.com.br/nossa-smart/dist/lazysizes.min.js"></script>
+    <script src="/home/home.js?20210610"></script>
+  
+  
+  
+  </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
