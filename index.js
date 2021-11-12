@@ -6,6 +6,8 @@ let app = express();
 app.use(express.static(__dirname +'/public'));
 const port = process.env.PORT || 3000;
 
+app.use('/public/assets/images', express.static(path.join(__dirname, 'public')));
+
 app.listen(port, ()=>{
     console.log('App is listening in port: ' + port);
 });
