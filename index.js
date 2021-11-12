@@ -14,6 +14,6 @@ app.get('/', function(req,res){
     res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
-app.get('/api', function(req,res){
-    res.send('api works!');
+app.get('/profile', function(req,res){
+    res.sendFile(path.join(__dirname, '/profile.html'));
 });
