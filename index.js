@@ -17,3 +17,7 @@ app.get('/', function(req,res){
 app.get('/profile.html', function(req,res){
     res.sendFile(path.join(__dirname, '/profile.html'));
 });
+
+app.get('/horarios.html', function(req,res){
+    res.send('api works');
+});
